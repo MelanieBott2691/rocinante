@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe|Recette Roulette</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Recipe name -->
+    <header class="bg-primary text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="font-weight-light text-white">Recipe Name</h1>
+            <button id="search-btn">Next</button>
+            <br />
+            <button>New Search Criteria</button>
+        </div>
+    </header>
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,46 +28,50 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     </head>
 
-    <body>
-        <!-- Recipe name -->
-        <header class="bg-primary text-center py-5 mb-4">
-            <div class="container">
-                <h1 class="font-weight-light text-white">Recipe Name</h1>
-                <button id="search-btn">Next</button>
-                <br />
-                <button>New Search Criteria</button>
-            </div>
-        </header>
+    <!-- Recipe name -->
+    <div id="app-container">
+        <div id="search-container">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
+                <div class="container for-about">
+                    <div class="text-center py-5 mb-4">
 
-        <!-- Page Content -->
-        <div class="container">
-            <div class="row">
-                <!-- Image and button for recipe -->
-                <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
-                        <img src="assets/images/eggs.jpg" class="card-img-top" alt="..." />
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
-                            <!-- Recipe opens in new tab -->
-                            <button>Click for Recipe</button>
+                        <h2>Recette Roulette</h2>
+                        <div align="center"><input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px"></div>
+                        <br>
+                        <div class="btn">
+                            <button class="btn btn-info">Search For Recipe</button>
+                            <div style="background-image: url('/food-header.jpeg');">
+                            </div>
+                            <div id="results-container"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Team Member 2 -->
-                <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/FTha4zARGN4"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                        <!-- <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="..."> -->
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-0">Some Info</h5>
-                            <div class="card-text text-black-50">More Info</div>
+            </div>
+
+
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row">
+                    <!-- Image and button for recipe -->
+                    <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
+                                <!-- Recipe opens in new tab -->
+                                <button>Click for Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FTha4zARGN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="..."> -->
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0">Some Info</h5>
+                                <div class="card-text text-black-50">More Info</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,5 +79,6 @@
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
-    </body>
+</body>
+
 </html>
