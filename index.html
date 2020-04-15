@@ -10,35 +10,25 @@
 </head>
 
 <body>
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recipe|Recette Roulette</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    </head>
-
     <!-- Recipe name -->
     <div id="app-container">
         <div id="search-container">
             <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
                 <div class="container for-about">
                     <div class="text-center py-5 mb-4">
-
                         <h2>Recette Roulette</h2>
-                        <div align="center"><input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px"></div>
-                        <br>
-                        <div class="btn">
+                        <div align="center">
+                            <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
+                        </div>
+                        <br />
+                        <div class="search-btn">
                             <button class="btn btn-info">Search For Recipe</button>
-                            <div style="background-image: url('/food-header.jpeg');">
-                            </div>
+                            <div style="background-image: url('/food-header.jpeg');"></div>
                             <div id="results-container"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <!-- Page Content -->
             <div class="container">
@@ -46,7 +36,7 @@
                     <!-- Image and button for recipe -->
                     <div class="col-xl-6 col-md-6 mb-4">
                         <div class="card border-0 shadow">
-                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="...">
+                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="..." />
                             <div class="card-body text-center">
                                 <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
                                 <!-- Recipe opens in new tab -->
@@ -70,6 +60,7 @@
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
+    </div>
 </body>
 
 </html>
