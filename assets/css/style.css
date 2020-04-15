@@ -1,0 +1,10 @@
+/* style sheet */
+
+#search-container {
+    background-image: url(assets/images/food-header.jpeg);
+    margin: auto;
+}
+
+h2 {
+    color: white;
+}
