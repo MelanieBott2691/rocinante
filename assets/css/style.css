@@ -8,3 +8,18 @@ h2 {
 html {
     font-size: calc(lem + lvw);
 }
+
+li {
+    list-style: none;
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+}
+
+.h5 {
+    margin-right: auto;
+    margin-left: 25px;
+    padding: auto;
+}
