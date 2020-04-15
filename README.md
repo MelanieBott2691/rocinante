@@ -6,7 +6,7 @@
 
 **Contributors:**
 
-*  Melanie Bott
+* Melanie Bott
 
 * Bobby Marks
 
