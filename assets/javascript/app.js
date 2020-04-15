@@ -49,9 +49,11 @@ $('.btn').on('click', function () {
                 if (recipes) {
                     recipeIndex = randomIndex(recipeLength);
                     recipe = recipes[recipeIndex];
+                    console.log(recipe.name);
                     console.log(recipe.sections);
                     console.log(recipe.yields);
                 } else {
+                    console.log(name);
                     console.log(sections);
                     console.log(yields);
                 }
