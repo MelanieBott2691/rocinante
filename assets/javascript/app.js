@@ -1,27 +1,67 @@
 // Start of Javascript for project!
-
+// var data = require('./results.json');
 // hold 10 results from user search
-var topTen = [];
 
-// yummply object to search user inputs
-var yummly = {
-    url: 'yummly2.p.rapidapi.com',
-    token: '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
+var from = 0;
+var sizes = 1;
+var tags;
+var q = 'pancakes';
+
+var randomIndex = function (max) {
+    return Math.floor(Math.random() * Math.floor(max));
 };
 
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://yummly2.p.rapidapi.com/feeds/search?FAT_KCALMax=1000&maxTotalTimeInSeconds=7200&allowedAttribute=diet-lacto-vegetarian%252Cdiet-low-fodmap&q=chicken%20soup&start=0&maxResult=18',
+    url: 'https://tasty.p.rapidapi.com/recipes/list?from=' + from + '&size=' + sizes + '&tags&q=' + q,
     method: 'GET',
+    timeout: 0,
     headers: {
-        'x-rapidapi-host': 'yummly2.p.rapidapi.com',
+        'x-rapidapi-host': 'tasty.p.rapidapi.com',
         'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
     },
 };
 
-$.ajax(settings).done(function (response) {
-    console.log(response);
+$('.btn').on('click', function () {
+    $.ajax(settings).done(function (response) {
+        var resultCount = response.count;
+        from = randomIndex(resultCount - 1);
+        console.log(from);
+        if (resultCount > 0) {
+            $.ajax({
+                url: 'https://tasty.p.rapidapi.com/recipes/list?from=' + from + '&size=' + sizes + '&tags&q=' + q,
+                method: 'GET',
+                timeout: 0,
+                headers: {
+                    'x-rapidapi-host': 'tasty.p.rapidapi.com',
+                    'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
+                },
+            }).done(function (response) {
+                var res = response.results[0];
+                var id = res.id;
+                var name = res.name;
+                var recipes = res.recipes;
+                var recipeLength = recipes.length;
+                var yields = res.yields;
+                var sections = res.sections;
+                console.log(res);
+                console.log(id);
+                console.log(name);
+                if (recipes) {
+                    recipeIndex = randomIndex(recipeLength);
+                    recipe = recipes[recipeIndex];
+                    console.log(recipe.sections);
+                    console.log(recipe.yields);
+                } else {
+                    console.log(sections);
+                    console.log(yields);
+                }
+
+                var resultsWindow = $('<div>');
+            });
+        }
+    });
 });
 
-// On sumbit take all form data and execute search and retun of results
+// console.log(resultsTotalLength);
+// console.log(resultsBatchLength);
+// console.log(data.results[0]);
