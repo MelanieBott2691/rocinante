@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <!-- Recipe Info card -->
-                <div class="col-xl-6 col-md-6 mb-4">
+                <!-- <div class="col-xl-6 col-md-6 mb-4">
                     <div class="card border-0 shadow">
                         <div class="card-header">Recipe Name Here</div>
                         <div class="card-body text-dark">
@@ -102,14 +102,23 @@
                         </div>
 
                     </div>
+                </div> -->
+                <div class="col-xl-6 col-md-6 mb-4">
+                    <div class="card-header">Recipe Name</div>
+
+                    <select id="myselect" onchange="change_myselect(this.value)">
+                <option value="servings">Servings:</option>
+                <option value="nutrition">Nutrition:</option>
+                </select>
+
+                    <p id="demo"></p>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="image-container">
-        <!-- <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow"> -->
-        <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
-    </div>
+        <div id="image-container">
+            <!-- <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow"> -->
+            <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
+        </div>
     </div>
     <footer class="page-footer">
         <div class="container">
@@ -149,6 +158,7 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="assets/javascript/table.js"></script>
 
 <!-- script to run modal -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
