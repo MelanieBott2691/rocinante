@@ -3,33 +3,26 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-
-    //
-    <meta charset="UTF-8" /> //
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe|Recette Roulette</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    </script>
 </head>
 
 <body>
-    <!-- Recipe name -->
+    <!-- Recipe Search -->
     <div id="app-container">
         <div id="search-container">
             <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
                 <div class="container for-about">
                     <div class="text-center py-5 mb-4">
                         <h2>Recette Roulette</h2>
-                        <div align="center">
-                            <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
-                        </div>
-                        <br />
+                        <div align="center"><input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" /></div>
+                        <br>
                         <div class="search-btn">
                             <button id="search-btn" class="btn btn-info">Search For Recipe</button>
                             <div style="background-image: url('/food-header.jpeg');"></div>
@@ -38,14 +31,14 @@
                     </div>
                 </div>
             </div>
-
             <!-- Page Content -->
-            <div class="container">
+            <div class="results-container">
                 <div class="row">
                     <!-- Image and button for recipe -->
                     <div class="col-xl-6 col-md-6 mb-4">
                         <div class="card border-0 shadow">
                             <img src="assets/images/eggs.jpg" class="card-img-top" alt="..." />
+                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
                                 <!-- Recipe opens in new tab -->
@@ -53,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Team Member 2 -->
+                    <!-- Video section -->
                     <div class="col-xl-6 col-md-6 mb-4">
                         <div class="card border-0 shadow">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/FTha4zARGN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -67,41 +60,26 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
     </div>
-
-
+    <div class="image-container">
+        <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
+            <img src="assets/images/food-footer.jpeg" width="1200px" class="center">
+        </div>
+    </div>
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <!-- <div class="col"> -->
+                <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
+                    <div class="xs-flex xs-flex-column">
+                        <img class="logo xs-mbl">
+                        <img src="assets/images/logo_slant.png" width="150px"></img>
+                        </img>
+                    </div>
+                </div>
 
-                <!-- <ul>
-                        <li>About Us</li>
-                        <li>
-                            <a id="footer_newsroom" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Newsroom</a></li>
-                        <li>
-                            <a id="footer_updates" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Updates</a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="col">
 
-                    <ul>
-                        <li>Advertising</li>
-                        <li>
-                            <a id="footer_adverstis" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Advertise With Us</a></li>
-                    </ul>
-                </div> -->
                 <div class="col">
                     <ul>
-                        <!-- <li>Global Community</li> -->
-                        <!-- <li>
-                            <a id="footer_help" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Help</a></li> -->
                         <li>
                             <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right">
                      Privacy Policy</a></li>
@@ -115,7 +93,7 @@
                 </div>
             </div>
         </div>
-
+        </div>
 
         <div class="footer-copyright">
             <div class="container">
@@ -124,6 +102,8 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
