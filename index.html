@@ -15,24 +15,20 @@
 </head>
 
 <body>
-
-    <!-- Recipe name -->
+    <!-- Recipe Search -->
     <div id="app-container">
         <div id="search-container">
-            <div class="jumbotron jumbotron-fluid"
-                style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
-                <div class="container for-about">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
+                <div id="container">
                     <div class="text-center py-5 mb-4">
-
                         <h2>Recette Roulette</h2>
-                        <div align="center"><input class="form-control" id="input-search" type="text"
-                                placeholder="Type something to search recipe items" style="width: 300px; height: 50px">
+                        <div align="center">
+                            <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
                         </div>
-                        <br>
-                        <div class="btn">
+                        <br />
+                        <div class="search-btn">
                             <button id="btn-search" class="btn btn-info">Search For Recipe</button>
-                            <div style="background-image: url('/food-header.jpeg');">
-                            </div>
+                            <div style="background-image: url('/food-header.jpeg');"></div>
                             <div id="results-container"></div>
                         </div>
                     </div>
@@ -42,8 +38,7 @@
 
         <!-- Page Content -->
         <!-- Modal to display recipe -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -92,8 +87,7 @@
                             <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
 
                             <!-- Button trigger modal to diplay recipe -->
-                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
+                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Recipe
                             </button>
                         </div>
@@ -117,21 +111,51 @@
             </div>
         </div>
     </div>
+    <div id="image-container">
+        <!-- <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow"> -->
+        <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
+    </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
+                    <div class="xs-flex xs-flex-column">
+                        <img class="logo xs-mbl" />
+                        <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
+                    </div>
+                </div>
+                <div class="col blocktext">
+                    <ul>
+                        <li>
+                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right"> Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right"> User Agreement</a>
+                        </li>
+                        <li>
+                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right"> Advertise With Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- footer container -->
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Recette Roulette
+                <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- script to run modal -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-    </script>
-</body>
+        <!-- script to run modal -->
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
 </html>
