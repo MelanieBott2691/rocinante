@@ -1,4 +1,4 @@
-// Random Number Generator
+// Random number generator
 var randomIndex = function (max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
@@ -6,7 +6,7 @@ var randomIndex = function (max) {
 // Object to parse out multiple responses from the api call
 var parseJSON = {
     instructions: function () {
-        // stuff to
+        // return list of usabe values from instructions response
     },
 };
 
@@ -26,10 +26,14 @@ $('#btn-search').on('click', function () {
         },
     };
 
+    // Initial call to get search count
     $.ajax(settings).done(function (response) {
         var resultCount = response.count;
         from = randomIndex(resultCount - 1);
         if (resultCount > 0) {
+            // second call to make the recipe returned truly random
+            // by using the randomIndex function with the result
+            // count and calling to a specic but random index
             $.ajax({
                 url: 'https://tasty.p.rapidapi.com/recipes/list?from=' + from + '&size=' + sizes + '&tags&q=' + q,
                 method: 'GET',
@@ -45,7 +49,7 @@ $('#btn-search').on('click', function () {
                 var res = response.results[0];
                 console.log('response:', res);
 
-                // Nested Random Recipe
+                // Nested random Recipe
                 if (res.recipes) {
                     var recipeLength = res.recipes.length;
                     recipeIndex = randomIndex(recipeLength);
@@ -67,6 +71,7 @@ $('#btn-search').on('click', function () {
                     console.log('thumbnail', thumbnail);
                     console.log('video', video);
                 } else {
+                    // Non nested radmon recipe
                     var id = res.id;
                     var name = res.name;
                     var servings = res.num_servings;
@@ -84,22 +89,15 @@ $('#btn-search').on('click', function () {
                     console.log('thumbnail', thumbnail);
                     console.log('video', video);
                 }
+                // Display data to the html
 
                 $('.name').text(name)
                 $('#thumbnail').attr('src', thumbnail)
                 $('.video').attr('src', video)
                 $('#servings').text('Servings: ' +  servings)
 
-
-
-                // Display Data
-
-
+                // Update the above to updating/adding new html elements with JQuery
             });
         }
     });
 });
-
-// console.log(resultsTotalLength);
-// console.log(resultsBatchLength);
-// console.log(data.results[0]);
