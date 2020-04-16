@@ -37,8 +37,10 @@ $('#btn-search').on('click', function () {
                 headers: {
                     'x-rapidapi-host': 'tasty.p.rapidapi.com',
                     'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
+
                 },
-            }).done(function (response) {
+
+            }).done(function(response) {
                 // Response Data
                 var res = response.results[0];
                 console.log('response:', res);
