@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+    <title>Recipe|Recette Roulette</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-    <title>Recipe|Recette Roulette</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
@@ -18,11 +19,13 @@
     <div id="app-container">
         <div id="search-container">
             <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
-                <div class="container for-about">
+                <div id="container">
                     <div class="text-center py-5 mb-4">
                         <h2>Recette Roulette</h2>
-                        <div align="center"><input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" /></div>
-                        <br>
+                        <div align="center">
+                            <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
+                        </div>
+                        <br />
                         <div class="search-btn">
                             <button id="search-btn" class="btn btn-info">Search For Recipe</button>
                             <div style="background-image: url('/food-header.jpeg');"></div>
@@ -38,7 +41,7 @@
                     <div class="col-xl-6 col-md-6 mb-4">
                         <div class="card border-0 shadow">
                             <img src="assets/images/eggs.jpg" class="card-img-top" alt="..." />
-                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="...">
+                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="..." /> git
                             <div class="card-body text-center">
                                 <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
                                 <!-- Recipe opens in new tab -->
@@ -61,32 +64,31 @@
             </div>
         </div>
     </div>
-    <div class="image-container">
-        <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
-            <img src="assets/images/food-footer.jpeg" width="1200px" class="center">
-        </div>
+    <div id="image-container">
+        <!-- <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow"> -->
+        <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
+    </div>
     </div>
     <footer class="page-footer">
         <div class="container">
             <div class="row">
                 <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
                     <div class="xs-flex xs-flex-column">
-                        <img class="logo xs-mbl">
-                        <img src="assets/images/logo_slant.png" width="150px"></img>
-                        </img>
+                        <img class="logo xs-mbl" />
+                        <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
                     </div>
                 </div>
-                <div class="col">
+                <div class="col blocktext">
                     <ul>
                         <li>
-                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Privacy Policy</a></li>
+                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right"> Privacy Policy</a>
+                        </li>
                         <li>
-                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     User Agreement</a></li>
+                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right"> User Agreement</a>
+                        </li>
                         <li>
-                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                     Advertise With Us</a></li>
+                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right"> Advertise With Us</a>
+                        </li>
                     </ul>
                 </div>
             </div>

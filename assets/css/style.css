@@ -3,10 +3,22 @@
 h2 {
     color: white;
     font-size: 42px;
+    text-align: center;
 }
+
+
+/* 
+#container {
+    margin-left: 50px;
+} */
 
 html {
     font-size: calc(lem + lvw);
+}
+
+.col {
+    text-align: center;
+    margin-top: 40px;
 }
 
 li {
@@ -15,26 +27,12 @@ li {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    align-items: right;
 }
-
-
-/* .content {
-    padding-left: 30px;
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-top: 5px;
-} */
 
 .h5 {
     margin-right: auto;
     margin-left: 25px;
     padding: auto;
-}
-
-#search-container {
-    background-image: url(assets/images/food-header.jpeg);
-    margin: auto;
 }
 
 .page-footer {
@@ -49,21 +47,10 @@ li {
     float: left;
 }
 
-.content {
-    border: none !important;
-    width: auto !important;
-    height: auto;
-    max-width: 100%;
-    max-height: 28px !important;
-    cursor: pointer;
+#image-container {
+    /* display: center !important; */
 }
 
-.image-container {
-    display: center !important;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.col {
-    text-align: center;
+.container {
+    margin-left: 20px;
 }
