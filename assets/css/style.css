@@ -63,3 +63,7 @@ li {
     margin-left: auto;
     margin-right: auto;
 }
+
+.col {
+    text-align: center;
+}
