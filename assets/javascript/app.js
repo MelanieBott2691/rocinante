@@ -27,7 +27,7 @@ var settings = {
 
 // Search Button
 
-$('#search-btn').on('click', function () {
+$('#btn-search').on('click', function () {
     $.ajax(settings).done(function (response) {
         var resultCount = response.count;
         from = randomIndex(resultCount - 1);
@@ -46,11 +46,11 @@ $('#search-btn').on('click', function () {
                 var id = res.id;
                 var name = res.name;
                 var recipes = res.recipes;
-                var num_servings = res.num_servings;
+                var servings = res.num_servings;
                 var sections = res.sections;
                 var instructions = res.instructions;
-                var thumbnail_url = res.thumbnail_url;
-                var original_video_url = res.original_video_url;
+                var thumbnail = res.thumbnail_url;
+                var video = res.original_video_url;
                 var nutrition = res.nutrition;
                 console.log('response:', res);
                 console.log('id:', id);
@@ -59,32 +59,33 @@ $('#search-btn').on('click', function () {
                     recipeIndex = randomIndex(recipeLength);
                     recipe = recipes[recipeIndex];
                     var name = recipe.name;
-                    var num_servings = recipe.num_servings;
+                    var servings = recipe.num_servings;
                     var sections = recipe.sections;
                     var instructions = recipe.instructions;
-                    var thumbnail_url = recipe.thumbnail_url;
-                    var original_video_url = recipe.original_video_url;
+                    var thumbnail = recipe.thumbnail_url;
+                    var video = recipe.original_video_url;
                     var nutrition = recipe.nutrition;
                     console.log('name:', name);
-                    console.log('num_servings:', num_servings);
+                    console.log('servings:', num_servings);
                     console.log('sections', sections);
-                    console.log('thumbnail_url', thumbnail_url);
+                    console.log('thumbnail', thumbnail_url);
                     console.log('instructions', instructions);
-                    console.log('original_video_url', original_video_url);
+                    console.log('video', original_video_url);
                     console.log('nutrition', nutrition);
                 } else {
                     console.log('name:', name);
-                    console.log('num_servings:', num_servings);
-                    console.log('thumbnail_url', thumbnail_url);
+                    console.log('servings:', servings);
+                    console.log('thumbnail', thumbnail);
                     console.log('sections', sections);
                     console.log('instructions', instructions);
-                    console.log('original_video_url', original_video_url);
+                    console.log('video', video);
                     console.log('nutrition', nutrition);
                 }
 
                 // Display Data
 
                 var resultsWindow = $('<div>');
+                // #recipe-name
             });
         }
     });

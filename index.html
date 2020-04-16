@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe | Recette Roulette</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe | Recette Roulette</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-</head>
-
-<body>
-
+    <body>
         <!-- Recipe name -->
-    <div id="app-container">
-        <div id="search-container">
-            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
-                <div class="container for-about">
-                    <div class="text-center py-5 mb-4">
-
-                        <h2>Recette Roulette</h2>
-                        <div align="center"><input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px"></div>
-                        <br>
-                        <div class="btn">
-                            <button class="btn btn-info">Search For Recipe</button>
-                            <div style="background-image: url('/food-header.jpeg');">
+        <div id="app-container">
+            <div id="search-container">
+                <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/food-header.jpeg); background-size: 100%;">
+                    <div class="container for-about">
+                        <div class="text-center py-5 mb-4">
+                            <h2>Recette Roulette</h2>
+                            <div align="center">
+                                <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
                             </div>
-                            <div id="results-container"></div>
+                            <br />
+                            <div class="btn">
+                                <button id="btn-search" class="btn btn-info">Search For Recipe</button>
+                                <div style="background-image: url('/food-header.jpeg');"></div>
+                                <div id="results-container"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- Page Content -->
-            <div class="results-container">
-                <div class="row">
-                    <!-- Image and button for recipe -->
-                    <div class="col-xl-6 col-md-6 mb-4">
-                        <div class="card border-0 shadow">
-                            <img src="assets/images/eggs.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
-                                <!-- Recipe opens in new tab -->
-                                <button>Click for Recipe</button>
+                <!-- Page Content -->
+                <div class="results-container">
+                    <div class="row">
+                        <!-- Image and button for recipe -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-0 shadow">
+                                <img id="thumbnail_url" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/122897.jpg" class="card-img-top" alt="..." />
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-0">Hard Boiled Eggs</h5>
+                                    <!-- Recipe opens in new tab -->
+                                    <button>Click for Recipe</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Video section -->
-                    <div class="col-xl-6 col-md-6 mb-4">
-                        <div class="card border-0 shadow">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FTha4zARGN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <!-- <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="..."> -->
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-0">Some Info</h5>
-                                <div class="card-text text-black-50">More Info</div>
+                        <!-- Video section -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-0 shadow">
+                                <h6 class="recipe-name"></h6>
+                                <iframe
+                                    width="560"
+                                    height="315"
+                                    src="https://s3.amazonaws.com/video-api-prod/assets/e462e9f9509740ababf6c303ac0c0aee/potatopancakesfinalFB.mp4"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                                <!-- <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="..."> -->
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-0">Some Info</h5>
+                                    <div class="card-text text-black-50">More Info</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
-</body>
-
+    </body>
 </html>
