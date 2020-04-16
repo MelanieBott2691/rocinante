@@ -7,12 +7,12 @@ var sizes = 1;
 var tags;
 var q = 'pancakes';
 
-var randomIndex = function (max) {
+var randomIndex = function(max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
 
 var parseJSON = {
-    instructions: function () {},
+    instructions: function() {},
 };
 
 var settings = {
@@ -27,8 +27,9 @@ var settings = {
 
 // Search Button
 
-$('#search-btn').on('click', function () {
-    $.ajax(settings).done(function (response) {
+$('#search-btn').on('click', function() {
+
+    $.ajax(settings).done(function(response) {
         var resultCount = response.count;
         from = randomIndex(resultCount - 1);
         if (resultCount > 0) {
@@ -39,8 +40,10 @@ $('#search-btn').on('click', function () {
                 headers: {
                     'x-rapidapi-host': 'tasty.p.rapidapi.com',
                     'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
+
                 },
-            }).done(function (response) {
+
+            }).done(function(response) {
                 // Response Data
                 var res = response.results[0];
                 var id = res.id;
@@ -81,7 +84,7 @@ $('#search-btn').on('click', function () {
                     console.log('original_video_url', original_video_url);
                     console.log('nutrition', nutrition);
                 }
-
+                console.log("got it");
                 // Display Data
 
                 var resultsWindow = $('<div>');
