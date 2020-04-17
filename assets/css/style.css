@@ -39,13 +39,6 @@ h6 {
 
 /* RESULTS CONTAINER */
 
-#results-container {
-    /* height: 10em; */
-    position: relative;
-    left: 50px;
-    top: 40px;
-}
-
 
 /* FOOTER */
 
@@ -78,10 +71,12 @@ h6 {
     box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
 
-#login .container #login-row #login-column #login-box {
+
+/* #login .container #login-row #login-column #login-box {
     margin-top: 120px;
+    margin-bottom: 40px;
     max-width: 600px;
-    height: 320px;
+    height: auto;
     border: 1px solid #9C9C9C;
     background-color: #EAEAEA;
 }
@@ -93,6 +88,7 @@ h6 {
 #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: -85px;
 }
+ */
 
 
 /* =========================================== */
@@ -122,6 +118,10 @@ input[type=password] {
     border: none;
     cursor: pointer;
     width: 100%;
+}
+
+#results-container {
+    margin-bottom: 40px;
 }
 
 button:hover {
@@ -174,7 +174,7 @@ span.psw {
     top: 0;
     width: 100%;
     /* Full width */
-    height: 100%;
+    height: 80%;
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
@@ -183,10 +183,10 @@ span.psw {
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
     padding-top: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 80px !important;
 }
 
-<<<<<<< HEAD
 
 /* Modal Content/Box */
 
@@ -254,11 +254,4 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
-=======
-.container {
-    margin-left: 20px;
-}
-h5 {
-    padding-bottom: 10px;
->>>>>>> 10d1819bf92a7213bcbc0eedb7f2d33d24f264a6
 }
