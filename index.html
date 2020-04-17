@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/50e202d6cf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/less" href="assets/css/stack.less" />
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
                             </button>
 
                         <!-- button trigger modal to display ingredients and nutrition -->
-                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
+                        <button id="stacked-modal" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
                                 Click for Ingredients
                             </button>
 
@@ -103,66 +105,139 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <!-- stacked modal to display ingredients and nutrition -->
+                    <div id="stacked-modal" class="container">
+                        <h1>Stacked Modal </h1>
 
-                    <!-- Ingredient and Nutrition modal -->
-                    <div class="modal-body">
-                        <ul id="ingredients" class="list-group">
-                            <li>example 1</li>
-                            <li>example 2</li>
-                        </ul>
-                        <ul id="nutrition" class="list-group">
-                            <li>example 1</li>
-                            <li>example 2</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#test-modal">Show Modal</button>
 
-        <!-- Image and button for recipe -->
-        <div id="results-container" class="container-sm ">
-            <div class="row">
-                <div class="col-xl-8 col-md-8 mb-8 text-center">
-                    <div class="card border-0 shadow">
-                        <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
-
-                            <!-- Button trigger modal to diplay video -->
-                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Video
-                                </button>
-                            <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Ingredients
-                                </button>
-                            <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Instructions (ordered list)
-                                </button>
-                        </div>
-
-                        <!-- Modal to display Instructions -->
-                        <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal fade" id="test-modal" data-modal-index="1">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Name of Recipe</h4>
                                     </div>
-
-                                    <!-- Instructions modal -->
                                     <div class="modal-body">
-                                        <ol id="instructions" class="list-group">
-                                            <li>example 1</li>
-                                            <li>example 2</li>
-                                        </ol>
+                                        <p>This is where the recipe goes&hellip;</p>
+                                        <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Some Info</button>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+
+                        <div class="modal fade" id="test-modal-2" data-modal-index="2">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Some Info</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Information about the recipe&hellip;</p>
+                                        <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Servings and Nutrition</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+                        <div class="modal fade" id="test-modal-3">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Serving and Nutrition</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Info HERE&hellip;</p>
+
+                                        <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-4">Return to New Search</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
+
+                        <!-- Ingredient and Nutrition modal -->
+                        <div class="modal-body">
+                            <ul id="ingredients" class="list-group">
+                                <li>example 1</li>
+                                <li>example 2</li>
+                            </ul>
+                            <ul id="nutrition" class="list-group">
+                                <li>example 1</li>
+                                <li>example 2</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image and button for recipe -->
+            <div id="results-container" class="container-sm ">
+                <div class="row">
+                    <div class="col-xl-8 col-md-8 mb-8 text-center">
+                        <div class="card border-0 shadow">
+                            <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
+
+                                <!-- Button trigger modal to diplay video -->
+                                <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                Click for Video
+                                </button>
+                                <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                Click for Ingredients
+                                </button>
+                                <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                Click for Instructions (ordered list)
+                                </button>
+                            </div>
+
+                            <!-- Modal to display Instructions -->
+                            <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                                        </div>
+
+                                        <!-- Instructions modal -->
+                                        <div class="modal-body">
+                                            <ol id="instructions" class="list-group">
+                                                <li>example 1</li>
+                                                <li>example 2</li>
+                                            </ol>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -170,179 +245,208 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- BOTTOM OF PAGE IMAGE -->
+            <!-- BOTTOM OF PAGE IMAGE -->
 
-        <div id="image-container">
-            <img src="assets/images/food-footer.jpeg" width="1050px">
-        </div>
-
-        <!-- BOOTSTRAP RESPONSIVE FOOTER -->
-        <footer class="page-footer font-small unique-color-dark">
-            <div style="background-color: #8b1212;">
-                <div class="container">
-
-                    <!-- Grid row-->
-                    <div class="row py-4 d-flex align-items-center">
-
-                        <!-- Grid column -->
-                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                            <h5 class="mb-0">Get connected with us on social networks!</h5>
-                        </div>
-
-                        <!-- Grid column using font awesome kit-->
-                        <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-                            <!-- Facebook -->
-                            <a class="fb-ic">
-                                <i class="fab fa-facebook-f white-text mr-4"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a class="tw-ic">
-                                <i class="fab fa-twitter white-text mr-4"> </i>
-                            </a>
-                            <!-- Google +-->
-                            <a class="gplus-ic">
-                                <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                            </a>
-                            <!--Linkedin -->
-                            <a class="li-ic">
-                                <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                            </a>
-                            <!--Instagram-->
-                            <a class="ins-ic">
-                                <i class="fab fa-instagram white-text"> </i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div id="image-container">
+                <img src="assets/images/food-footer.jpeg" width="1050px">
             </div>
 
-            <!-- Footer Links -->
-            <div class="container text-center text-md-left mt-5">
+            <!-- BOOTSTRAP RESPONSIVE FOOTER -->
+            <footer class="page-footer font-small unique-color-dark">
+                <div style="background-color: #8b1212;">
+                    <div class="container">
 
-                <!-- Grid row -->
-                <div class="row mt-3">
+                        <!-- Grid row-->
+                        <div class="row py-4 d-flex align-items-center">
 
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Grid column -->
+                            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                                <h5 class="mb-0">Get connected with us on social networks!</h5>
+                            </div>
 
-                        <!-- Content -->
-                        <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
-                            <div class="xs-flex xs-flex-column">
-                                <img class="logo xs-mbl" />
-                                <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
+                            <!-- Grid column using font awesome kit-->
+                            <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                                <!-- Facebook -->
+                                <a class="fb-ic">
+                                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                                </a>
+                                <!-- Twitter -->
+                                <a class="tw-ic">
+                                    <i class="fab fa-twitter white-text mr-4"> </i>
+                                </a>
+                                <!-- Google +-->
+                                <a class="gplus-ic">
+                                    <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                                </a>
+                                <!--Linkedin -->
+                                <a class="li-ic">
+                                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                                </a>
+                                <!--Instagram-->
+                                <a class="ins-ic">
+                                    <i class="fab fa-instagram white-text"> </i>
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Footer Links -->
+                <div class="container text-center text-md-left mt-5">
 
-                        <!-- Beverage Link -->
-                        <h6 class="text-uppercase font-weight-bold">Beverages</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <a href="https://www.betterbeveragefinder.org">Better Beverage Finder</a>
-                        </p>
-                    </div>
+                    <!-- Grid row -->
+                    <div class="row mt-3">
 
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-                        <!-- User Links -->
-                        <h6 class="text-uppercase font-weight-bold">Advertisement Opportunities</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-
-                        <!-- FORM GENERATOR -->
-                        <p>
-                            <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Account</a>
-                        </p>
-
-                        <div id="id01" class="modal">
-                            <form class="modal-content animate" action="/action_page.php" method="post">
-                                <div class="imgcontainer">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                    <i class="far fa-user"></i>
+                            <!-- Content -->
+                            <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
+                                <div class="xs-flex xs-flex-column">
+                                    <img class="logo xs-mbl" />
+                                    <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="container">
-                                    <label for="uname"><b>Username</b></label>
-                                    <input type="text" placeholder="Enter Username" name="uname" required>
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-                                    <label for="psw"><b>Password</b></label>
-                                    <input type="password" placeholder="Enter Password" name="psw" required>
+                            <!-- Beverage Link -->
+                            <h6 class="text-uppercase font-weight-bold">Beverages</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a href="https://www.betterbeveragefinder.org">Better Beverage Finder</a>
+                            </p>
+                        </div>
 
-                                    <button type="submit" class="submitbtn">Login</button>
-                                    <label>
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- User Links -->
+                            <h6 class="text-uppercase font-weight-bold">Advertisement Opportunities</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+                            <!-- FORM GENERATOR -->
+                            <p>
+                                <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Account</a>
+                            </p>
+
+                            <div id="id01" class="modal">
+                                <form class="modal-content animate" action="/action_page.php" method="post">
+                                    <div class="imgcontainer">
+                                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                        <i class="far fa-user"></i>
+                                    </div>
+
+                                    <div class="container">
+                                        <label for="uname"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                        <button type="submit" class="submitbtn">Login</button>
+                                        <label>
                                         <input type="checkbox" checked="checked" name="remember"> Remember me
                                         </label>
-                                </div>
+                                    </div>
 
-                                <div class="container" style="background-color:#f1f1f1">
-                                    <button type="button-info" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                    <span class="psw">Forgot <a href="#">password?</a></span>
-                                </div>
-                            </form>
+                                    <div class="container" style="background-color:#f1f1f1">
+                                        <button type="button-info" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- FORM END -->
+
+                            <p>
+                                <a href="#!">Become an Affiliate</a>
+                            </p>
+                            <p>
+                                <a href="#!">Donate</a>
+                            </p>
+                            <p>
+                                <a href="#!">Help</a>
+                            </p>
+
                         </div>
-                        <!-- FORM END -->
 
-                        <p>
-                            <a href="#!">Become an Affiliate</a>
-                        </p>
-                        <p>
-                            <a href="#!">Donate</a>
-                        </p>
-                        <p>
-                            <a href="#!">Help</a>
-                        </p>
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-                    </div>
+                            <!-- Contact Info -->
+                            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Salt Lake City, UT 84112</p>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p>
+                                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
 
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                        <!-- Contact Info -->
-                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <i class="fas fa-home mr-3"></i> Salt Lake City, UT 84112</p>
-                        <p>
-                            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                        <p>
-                            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p>
-                            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center">© 2020 Copyright</div>
-        </footer>
+                <!-- Copyright -->
+                <div class="footer-copyright text-center">© 2020 Copyright</div>
+            </footer>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <script type="text/javascript" src="assets/javascript/table.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="assets/javascript/app.js"></script>
+            <script type="text/javascript" src="assets/javascript/table.js"></script>
 
-        <!-- script to run modal -->
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <!-- script to run modal -->
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <!-- form script -->
-        <script>
-            // Get the modal
-            var modal = document.getElementById('id01');
+            <!-- script for stacked modal -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+            <!-- form script -->
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
                 }
-            }
-        </script>
+            </script>
+            <!-- script for stacked modal -->
+            <script>
+                $(function() {
+                    $('.btn[stacked-modal]').on('click', function() {
+                        var $btn = $(this);
+                        var currentDialog = $btn.closest('.modal-dialog'),
+                            targetDialog = $($btn.attr('data-target'));;
+                        if (!currentDialog.length)
+                            return;
+                        targetDialog.data('previous-dialog', currentDialog);
+                        currentDialog.addClass('aside');
+                        var stackedDialogCount = $('.modal.in .modal-dialog.aside').length;
+                        if (stackedDialogCount <= 5) {
+                            currentDialog.addClass('aside-' + stackedDialogCount);
+                        }
+                    });
 
+                    $('.modal').on('hide.bs.modal', function() {
+                        var $dialog = $(this);
+                        var previousDialog = $dialog.data('previous-dialog');
+                        if (previousDialog) {
+                            previousDialog.removeClass('aside');
+                            $dialog.data('previous-dialog', undefined);
+                        }
+                    });
+                })
+            </script>
+            <script href="stack.less"></script>
 </body>
 
 </html>
