@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Recipe|Recette Roulette</title>
+    <title>Recipe | Recette Roulette</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -24,7 +24,7 @@
                     <div class="text-center py-5 mb-4">
                         <h2>Recette Roulette</h2>
                         <div align="center">
-                            <input class="form-control" id="input-search" type="text"
+                            <input class="form-control text-center" id="input-search" type="text"
                                 placeholder="Type something to search recipe items"
                                 style="width: 300px; height: 50px;" />
                         </div>
@@ -39,11 +39,48 @@
             </div>
         </div>
 
-        <!-- Page Content -->
-        <!-- Modal to display recipe -->
+        <!-- Search Results -->
+        <!-- Image of recipe and buttons for modals -->
+        <div id="results-container" class="container-sm text-center">
+            <div class="row">
+                <div class="col-xl-3 col-md-3 mb-3 text-center">
+                </div>
+                <div class="col-xl-6 col-md-6 mb-6 text-center">
+                    <div class="card border-0 shadow">
+                        <img id="thumbnail"
+                            src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="name card-title mb-0 font-weight-bold">Add Recipe Name Here</h5>
+
+                            <!-- Button trigger modal to display video -->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                Click for Video
+                            </button>
+
+                            <!-- button trigger modal to display ingredients and nutrition -->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                data-target="#scrollable">
+                                Click for Ingredients
+                            </button>
+
+                            <!-- button trigger modal to display instructions -->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                data-target="#longModal">
+                                Click for Instructions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 mb-3 text-center">
+                </div>
+            </div>
+        </div>
+        <!-- Modal to display video -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
@@ -52,7 +89,7 @@
                         </button>
                     </div>
                     <!-- Video modal -->
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         <iframe id="video" width="560" height="315"
                             src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
                             frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
@@ -62,14 +99,32 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
 
-                    
-                    <!-- Nutrition modal -->
-                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal to display ingredients and nutrition -->
+        <div class="modal fade" id="scrollable" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <!-- Ingredient and Nutrition modal -->
                     <div class="modal-body">
-                        <iframe id="nutrition" width="560" height="315"
-                            src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
-                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <ul id="ingredients" class="list-group">
+                            <li>example 1</li>
+                            <li>example 2</li>
+                        </ul>
+                        <ul id="nutrition" class="list-group">
+                            <li>example 1</li>
+                            <li>example 2</li>
+                        </ul>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -78,36 +133,33 @@
             </div>
         </div>
 
-        <!-- Image and button for recipe -->
-        <div id="results-container" class="container-sm ">
-            <div class="row">
-                <div class="col-xl-8 col-md-8 mb-8 text-center">
-                    <div class="card border-0 shadow">
-                        <img id="thumbnail"
-                            src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
+        <!-- Modal to display Instructions -->
+        <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
 
-                            <!-- Button trigger modal to diplay video -->
-                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
-                                Click for Video
-                            </button>
-                            <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
-                                Click for Ingredients
-                            </button>
-                            <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
-                                Click for Instructions (ordered list)
-                            </button>
-                        </div>
+                    <!-- Instructions modal -->
+                    <div class="modal-body">
+                        <ol id="instructions" class="list-group">
+                            <li>example 1</li>
+                            <li>example 2</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="image-container">
         <!-- <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow"> -->
         <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
