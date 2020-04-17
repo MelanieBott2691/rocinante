@@ -8,13 +8,19 @@ var parseJSON = {
     instructions: function () {
         // stuff to
     },
+    nutrition: function (res) {
+        return res;
+    },
+    ingredients: function () {
+        // stuff to
+    },
 };
 
 // Search button on click event
 $('#btn-search').on('click', function () {
     var from = 0;
     var sizes = 1;
-    var q = $('#input-search').val()
+    var q = $('#input-search').val();
     var tags;
     var settings = {
         url: 'https://tasty.p.rapidapi.com/recipes/list?from=' + from + '&size=' + sizes + '&tags&q=' + q,
@@ -25,6 +31,7 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
+    $('#input-search').val('');
 
     $.ajax(settings).done(function (response) {
         var resultCount = response.count;
@@ -37,10 +44,8 @@ $('#btn-search').on('click', function () {
                 headers: {
                     'x-rapidapi-host': 'tasty.p.rapidapi.com',
                     'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
-
                 },
-
-            }).done(function(response) {
+            }).done(function (response) {
                 // Response Data
                 var res = response.results[0];
                 console.log('response:', res);
@@ -53,7 +58,7 @@ $('#btn-search').on('click', function () {
                     var id = resNest.id;
                     var name = resNest.name;
                     var servings = resNest.num_servings;
-                    var sections = resNest.sections;
+                    var ingredients = resNest.sections;
                     var instructions = resNest.instructions;
                     var nutrition = resNest.nutrition;
                     var thumbnail = resNest.thumbnail_url;
@@ -61,16 +66,16 @@ $('#btn-search').on('click', function () {
                     console.log('id:', id);
                     console.log('name:', name);
                     console.log('servings:', servings);
-                    console.log('sections', sections);
-                    console.log('instructions', instructions);
-                    console.log('nutrition', nutrition);
+                    console.log('ingredients', ingredients.length, ingredients);
+                    console.log('instructions', instructions.length, instructions);
+                    console.log('nutrition', nutrition.length, nutrition);
                     console.log('thumbnail', thumbnail);
                     console.log('video', video);
                 } else {
                     var id = res.id;
                     var name = res.name;
                     var servings = res.num_servings;
-                    var sections = res.sections;
+                    var ingredients = res.sections;
                     var instructions = res.instructions;
                     var nutrition = res.nutrition;
                     var thumbnail = res.thumbnail_url;
@@ -78,28 +83,59 @@ $('#btn-search').on('click', function () {
                     console.log('id:', id);
                     console.log('name:', name);
                     console.log('servings:', servings);
-                    console.log('sections', sections);
-                    console.log('instructions', instructions);
-                    console.log('nutrition', nutrition);
+                    console.log('ingredients', ingredients.length, ingredients);
+                    console.log('instructions', instructions.length, instructions);
+                    console.log('nutrition', nutrition.length, nutrition);
                     console.log('thumbnail', thumbnail);
                     console.log('video', video);
                 }
-
-                $('.name').text(name)
-                $('#thumbnail').attr('src', thumbnail)
-                $('.video').attr('src', video)
-                $('#servings').text('Servings: ' +  servings)
-
-
-
                 // Display Data
 
+                $('.name').text(name);
+                $('#thumbnail').attr('src', thumbnail);
+                $('#video').attr('src', video);
+                $('#servings').text('Servings: ' + servings);
 
+                // Nutrition list
+                $('#nutrition').empty();
+                const entries = Object.entries(nutrition);
+                for (const [fact, count] of entries) {
+                    if (fact != 'updated_at') {
+                        var nutritionLine = $('<li>').html(`${fact}: ${count}`);
+                        $('#nutrition').append(nutritionLine);
+                    }
+                }
+                // Instructions
+                $('#instructions').empty();
+                for (var i = 0; i < instructions.length; i++) {
+                    var instructionLine = $('<li>').text(instructions[i].display_text);
+                        $('#instructions').append(instructionLine);
+                }
+                 // Ingredients
+                 $('#ingredients').empty();
+                 for (var i = 0; i < ingredients.length; i++) {
+                     console.log(ingredients[i].display_text)
+                     var nameSection = ingredients[i].name
+                     if(nameSection) {
+                         console.log(nameSection)
+                     } else {
+                         for(var j = 0; j < ingredients[i].components.length; j++) {
+                             console.log(ingredients[i].components[j].raw_text)
+                         }
+                     }
+
+                     var ingredientLine = $('<li>').text(ingredients[i].name);
+                         $('#ingredients').append(ingredientLine);
+                 }
             });
         }
     });
 });
 
-// console.log(resultsTotalLength);
-// console.log(resultsBatchLength);
-// console.log(data.results[0]);
+var input = document.getElementById('input-search');
+input.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('btn-search').click();
+    }
+});
