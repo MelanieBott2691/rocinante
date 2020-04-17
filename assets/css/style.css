@@ -186,6 +186,7 @@ span.psw {
     padding-bottom: 30px;
 }
 
+<<<<<<< HEAD
 
 /* Modal Content/Box */
 
@@ -253,4 +254,11 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+=======
+.container {
+    margin-left: 20px;
+}
+h5 {
+    padding-bottom: 10px;
+>>>>>>> 10d1819bf92a7213bcbc0eedb7f2d33d24f264a6
 }
