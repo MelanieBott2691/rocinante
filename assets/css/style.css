@@ -1,24 +1,26 @@
 /* CSS Project Start */
 
+
+/* App Containers */
+
+html {
+    font-size: calc(lem + lvw);
+}
+
 h2 {
     color: white;
     font-size: 42px;
     text-align: center;
 }
 
-
-/* 
-#container {
-    margin-left: 50px;
-} */
-
-html {
-    font-size: calc(lem + lvw);
-}
-
-.col {
+.thumbnail {
     text-align: center;
     margin-top: 40px;
+    vertical-align: center;
+}
+
+.clearfix {
+    overflow: auto;
 }
 
 li {
@@ -44,6 +46,19 @@ h6 {
     font-size: 14px;
 }
 
+
+/* RESULTS CONTAINER */
+
+#results-container {
+    /* height: 10em; */
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+
+
+/* FOOTER */
+
 .fab {
     color: white;
 }
@@ -61,18 +76,8 @@ h6 {
     float: left;
 }
 
-.container {
-    margin-left: 20px;
-}
-
 
 /* Registration Form */
-
-
-/* 
-body {
-    background-color: #525252;
-} */
 
 .centered-form {
     margin-top: 60px;
@@ -82,14 +87,6 @@ body {
     background: rgba(255, 255, 255, 0.8);
     box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
-
-
-/* body {
-    margin: 0;
-    padding: 0;
-    background-color: #17a2b8;
-    height: 100vh;
-} */
 
 #login .container #login-row #login-column #login-box {
     margin-top: 120px;
@@ -108,12 +105,10 @@ body {
 }
 
 
-/* form css */
+/* =========================================== */
 
 
-/* body {
-    font-family: Arial, Helvetica, sans-serif;
-} */
+/* Account FORM CSS */
 
 
 /* Full-width input fields */
@@ -128,23 +123,15 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-
-/* Set a style for all buttons */
-
-.button-info {
-    background-color: #4CAF50;
+.submitbtn {
+    border-radius: 5px;
+    background-color: teal;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
-}
-
-.submitbtn {
-    border-radius: 5px;
-    background-color: teal;
-    color: white;
 }
 
 button:hover {
@@ -157,7 +144,7 @@ button:hover {
 .cancelbtn {
     width: auto;
     height: 40px;
-    background-color: #991a11;
+    background-color: #8b1212;
     color: rgb(236, 231, 231);
     border-radius: 6px;
     font-size: 16px;
@@ -173,23 +160,20 @@ button:hover {
 }
 
 img.avatar {
-    width: 40%;
+    width: 60%;
     border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
 }
 
 span.psw {
     float: right;
     padding-top: 16px;
+    /* padding-right: auto; */
 }
 
 
-/* The Modal (background) */
+/* Account Modal (background) */
 
-.modal {
+#id01 {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -209,6 +193,7 @@ span.psw {
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
     padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 
