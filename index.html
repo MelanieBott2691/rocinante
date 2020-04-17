@@ -6,13 +6,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
     <!-- Font Awesome Kit Code -->
     <script src="https://kit.fontawesome.com/50e202d6cf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/less" href="assets/css/stack.less" />
-
+    <link rel="stylesheet" href="assets/css/stack.less" />
 </head>
 
 <body>
@@ -21,7 +23,6 @@
         <div id="search-container" class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
             <div id="container" class="text-center py-5 mb-4">
                 <h2>Recette Roulette</h2>
-                <!-- <div align="center"> -->
                 <input class="form-control text-center" id="input-search" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
                 <br />
                 <div class="search-btn">
@@ -40,7 +41,7 @@
                     <div class="card border-0 shadow">
                         <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
                         <div class="card-body text-center">
-                            <h5 class="name card-title font-weight-bold">Add Recipe Name Here</h5>
+                            <h5 class="name card-title font-weight-bold">Super Fluffy Omelet</h5>
 
                             <!-- Button trigger modal to display video -->
                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#staticBackdrop">
@@ -48,7 +49,7 @@
                             </button>
 
                             <!-- button trigger modal to display ingredients and nutrition -->
-                            <button id="stacked-modal" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
                                 Click for Ingredients
                             </button>
 
@@ -61,7 +62,7 @@
                 </div>
                 <div class="col-xl-3 col-md-3 mb-3 text-center">
                 </div>
-                <img src="assets/images/food-footer.jpeg" width="1350px">
+                <img src="assets/images/food-footer.jpeg" width="1250px">
             </div>
             <!-- Modal to display video -->
             <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -80,170 +81,82 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
+                        <!-- Modal to display ingredients and nutrition -->
+                        <div class="modal fade" id="scrollable" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                                    </div>
 
-                        <!-- Nutrition modal -->
-                        <div class="modal-body">
-                            <iframe id="nutrition" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                                    <!-- Ingredient and Nutrition modal -->
+                                    <div class="modal-body">
+                                        <ul id="ingredients" class="list-group">
+                                            <li class="list-group-item">5 large egg whites</li>
+                                            <li class="list-group-item">3 large egg yolks</li>
+                                            <li class="list-group-item">2 tablespoons unsalted butter, halved</li>
+                                            <li class="list-group-item">salt, to taste</li>
+                                            <li class="list-group-item">pepper, to taste</li>
+                                            <li class="list-group-item">fresh chive, chopped, for garnish</li>
+                                        </ul>
+                                        <ul id="nutrition" class="list-group">
+                                            <li>Calories 489</li>
+                                            <li>Fat 38g</li>
+                                            <li>Carbs 1g</li>
+                                            <li>Fiber 0g</li>
+                                            <li>Sugar 1g</li>
+                                            <li>Protein 31g</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Modal to display ingredients and nutrition -->
-                <div class="modal fade" id="scrollable" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!-- Modal to display Instructions -->
+                        <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                            </div>
-                            <!-- stacked modal to display ingredients and nutrition -->
-                            <div id="stacked-modal" class="container">
-                                <h1>Stacked Modal </h1>
-
-                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#test-modal">Show Modal</button>
-
-                                <div class="modal fade" id="test-modal" data-modal-index="1">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Name of Recipe</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>This is where the recipe goes&hellip;</p>
-                                                <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Some Info</button>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                                            </div>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-                                <!-- /.modal -->
-
-
-                                <div class="modal fade" id="test-modal-2" data-modal-index="2">
-                                    <div class="modal-dialog modal-md">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Some Info</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Information about the recipe&hellip;</p>
-                                                <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Servings and Nutrition</button>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-                                <!-- /.modal -->
-
-                                <div class="modal fade" id="test-modal-3">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Serving and Nutrition</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Info HERE&hellip;</p>
-
-                                                <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-4">Return to New Search</button>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-
-
-
-                                <!-- Ingredient and Nutrition modal -->
-                                <div class="modal-body">
-                                    <ul id="ingredients" class="list-group">
-                                        <li>example 1</li>
-                                        <li>example 2</li>
-                                    </ul>
-                                    <ul id="nutrition" class="list-group">
-                                        <li>example 1</li>
-                                        <li>example 2</li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Image and button for recipe -->
-                    <div id="results-container" class="container-sm ">
-                        <div class="row">
-                            <div class="col-xl-8 col-md-8 mb-8 text-center">
-                                <div class="card border-0 shadow">
-                                    <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body text-center">
-                                        <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
-
-                                        <!-- Button trigger modal to diplay video -->
-                                        <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Video
-                                </button>
-                                        <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Ingredients
-                                </button>
-                                        <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Instructions (ordered list)
-                                </button>
                                     </div>
 
-                                    <!-- Modal to display Instructions -->
-                                    <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="name modal-title" id="staticBackdropLabel">Name of Recipe</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                                                </div>
-
-                                                <!-- Instructions modal -->
-                                                <div class="modal-body">
-                                                    <ol id="instructions" class="list-group">
-                                                        <li>example 1</li>
-                                                        <li>example 2</li>
-                                                    </ol>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <!-- Instructions modal -->
+                                    <div class="modal-body">
+                                        <ol id="instructions" class="list-group" type="1">
+                                            <li class="list-group-item">Separate the egg whites and the egg yolks in two separate bowls. You’ll only need 3 yolks, so discard the other 2 or reserve for another use.</li>
+                                            <li class="list-group-item">Whisk the egg yolks until they become homogenous and pale in color. Set aside.</li>
+                                            <li class="list-group-item">Transfer the egg whites to a large bowl and whisk until they triple in size and become white with medium peaks.</li>
+                                            <li class="list-group-item">Carefully fold the egg yolks into the egg whites until fully incorporated.</li>
+                                            <li class="list-group-item">Pour the egg mixture into a medium nonstick frying pan with a lid. Cook over medium-low heat until bottom of omelet has set, about 5 minutes.</li>
+                                            <li class="list-group-item">Lift up each side of the omelette and drop a tablespoon of butter underneath.</li>
+                                            <li class="list-group-item">Cover the pan and cook for another 5 minutes, or until the top of the omelet has set.</li>
+                                            <li class="list-group-item">Remove the lid and season the omelet with salt and pepper. Remove the pan from the heat.</li>
+                                            <li class="list-group-item">Fold the omelette onto a plate and sprinkle with chives.</li>
+                                            <li class="list-group-item">Enjoy!</li>
+                                        </ol>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- BOTTOM OF PAGE IMAGE -->
                 </div>
             </div>
         </div>
     </div>
+
+
 </body>
 
 <!-- BOOTSTRAP RESPONSIVE FOOTER -->

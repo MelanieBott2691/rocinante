@@ -72,25 +72,6 @@ h6 {
 }
 
 
-/* #login .container #login-row #login-column #login-box {
-    margin-top: 120px;
-    margin-bottom: 40px;
-    max-width: 600px;
-    height: auto;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-}
-
-#login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-}
-
-#login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-}
- */
-
-
 /* =========================================== */
 
 
@@ -190,7 +171,7 @@ span.psw {
 
 /* Modal Content/Box */
 
-.modal-content {
+.my-modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
@@ -202,7 +183,7 @@ span.psw {
 
 /* The Close Button (x) */
 
-.close {
+.my-close {
     position: absolute;
     right: 25px;
     top: 0;
@@ -211,8 +192,8 @@ span.psw {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.my-close:hover,
+.my-close:focus {
     color: red;
     cursor: pointer;
 }

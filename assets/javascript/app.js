@@ -1,23 +1,23 @@
 // Random number generator
-var randomIndex = function (max) {
+var randomIndex = function(max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
 
 // Object to parse out multiple responses from the api call
 var parseJSON = {
-    instructions: function () {
+    instructions: function() {
         // return list of usabe values from instructions response
     },
-    nutrition: function (res) {
+    nutrition: function(res) {
         return res;
     },
-    ingredients: function () {
+    ingredients: function() {
         // stuff to
     },
 };
 
 // Search button on click event
-$('#btn-search').on('click', function () {
+$('#btn-search').on('click', function() {
     var from = 0;
     var sizes = 1;
     var q = $('#input-search').val();
@@ -31,11 +31,11 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
-  
+
     $('#input-search').val('');
 
     // Initial call to get search count
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function(response) {
         var resultCount = response.count;
         from = randomIndex(resultCount - 1);
         if (resultCount > 0) {
@@ -50,7 +50,7 @@ $('#btn-search').on('click', function () {
                     'x-rapidapi-host': 'tasty.p.rapidapi.com',
                     'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
                 },
-            }).done(function (response) {
+            }).done(function(response) {
                 // Response Data
                 var res = response.results[0];
                 console.log('response:', res);
@@ -115,34 +115,33 @@ $('#btn-search').on('click', function () {
                 $('#instructions').empty();
                 for (var i = 0; i < instructions.length; i++) {
                     var instructionLine = $('<li>').text(instructions[i].display_text);
-                        $('#instructions').append(instructionLine);
+                    $('#instructions').append(instructionLine);
                 }
-                 // Ingredients
-                 $('#ingredients').empty();
-                 for (var i = 0; i < ingredients.length; i++) {
-                     console.log(ingredients[i].display_text)
-                     var nameSection = ingredients[i].name
-                     if(nameSection) {
-                         console.log(nameSection)
-                     } else {
-                         for(var j = 0; j < ingredients[i].components.length; j++) {
-                             console.log(ingredients[i].components[j].raw_text)
-                         }
-                     }
+                // Ingredients
+                $('#ingredients').empty();
+                for (var i = 0; i < ingredients.length; i++) {
+                    console.log(ingredients[i].display_text)
+                    var nameSection = ingredients[i].name
+                    if (nameSection) {
+                        console.log(nameSection)
+                    } else {
+                        for (var j = 0; j < ingredients[i].components.length; j++) {
+                            console.log(ingredients[i].components[j].raw_text)
+                        }
+                    }
 
-                     var ingredientLine = $('<li>').text(ingredients[i].name);
-                         $('#ingredients').append(ingredientLine);
-                 }
+                    var ingredientLine = $('<li>').text(ingredients[i].name);
+                    $('#ingredients').append(ingredientLine);
+                }
             });
         }
     });
 });
 
 var input = document.getElementById('input-search');
-input.addEventListener('keyup', function (event) {
+input.addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         document.getElementById('btn-search').click();
     }
 });
-
