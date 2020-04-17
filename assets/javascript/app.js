@@ -25,6 +25,7 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
+    $("#input-search").val("");
 
     $.ajax(settings).done(function (response) {
         var resultCount = response.count;
@@ -98,6 +99,14 @@ $('#btn-search').on('click', function () {
             });
         }
     });
+});
+
+var input = document.getElementById("input-search");
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("btn-search").click();
+  }
 });
 
 // console.log(resultsTotalLength);
