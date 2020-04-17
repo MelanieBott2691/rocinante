@@ -18,12 +18,15 @@
     <!-- Recipe Search -->
     <div id="app-container">
         <div id="search-container">
-            <div class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
+            <div class="jumbotron jumbotron-fluid"
+                style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
                 <div id="container">
                     <div class="text-center py-5 mb-4">
                         <h2>Recette Roulette</h2>
                         <div align="center">
-                            <input class="form-control" id="input-search" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
+                            <input class="form-control" id="input-search" type="text"
+                                placeholder="Type something to search recipe items"
+                                style="width: 300px; height: 50px;" />
                         </div>
                         <br />
                         <div class="search-btn">
@@ -38,7 +41,8 @@
 
         <!-- Page Content -->
         <!-- Modal to display recipe -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -47,14 +51,22 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <!-- Video modal -->
                     <div class="modal-body">
+<<<<<<< HEAD
                         This is where the recipe goes.
                         <iframe class="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+=======
+                        <iframe id="video" width="560" height="315"
+                            src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
+                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
                             allowfullscreen></iframe>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>
         </div>
@@ -65,32 +77,52 @@
                 <div class="col-xl-6 col-md-6 mb-4">
                     <div class="card border-0 shadow">
                         <iframe class="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+=======
+                    
+                    <!-- Nutrition modal -->
+                    
+                    <div class="modal-body">
+                        <iframe id="nutrition" width="560" height="315"
+                            src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
+                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
                             allowfullscreen></iframe>
-                        <div class="card-body text-center">
-                            <h5 class="name card-title mb-0">Some Info</h5>
-                            <div class="card-text text-black-50">More Info</div>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Image and button for recipe -->
-        <div id="results-container" class="container-sm">
+        <div id="results-container" class="container-sm ">
             <div class="row">
-                <div class="col-xl-6 col-md-6 mb-4">
+                <div class="col-xl-8 col-md-8 mb-8 text-center">
                     <div class="card border-0 shadow">
-                        <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
+                        <img id="thumbnail"
+                            src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg"
+                            class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
 
-                            <!-- Button trigger modal to diplay recipe -->
-                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                Click for Recipe
+                            <!-- Button trigger modal to diplay video -->
+                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                Click for Video
+                            </button>
+                            <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                Click for Ingredients
+                            </button>
+                            <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                Click for Instructions (ordered list)
                             </button>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <!-- Recipe Info card -->
                 <!-- <div class="col-xl-6 col-md-6 mb-4">
                     <div class="card border-0 shadow">
@@ -116,6 +148,8 @@
 
                     <p id="demo"></p>
                 </div>
+=======
+>>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
             </div>
         </div>
         <div id="image-container">
@@ -135,13 +169,16 @@
                 <div class="col blocktext">
                     <ul>
                         <li>
-                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right"> Privacy Policy</a>
+                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right">
+                                Privacy Policy</a>
                         </li>
                         <li>
-                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right"> User Agreement</a>
+                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right">
+                                User Agreement</a>
                         </li>
                         <li>
-                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right"> Advertise With Us</a>
+                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right">
+                                Advertise With Us</a>
                         </li>
                     </ul>
                 </div>
@@ -166,6 +203,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+<<<<<<< HEAD
 <!-- script to run modal -->
 <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -174,3 +212,20 @@
 </body>
 
 </html>
+=======
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- script to run modal -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+>>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
