@@ -13,16 +13,6 @@ h2 {
     text-align: center;
 }
 
-.thumbnail {
-    text-align: center;
-    margin-top: 40px;
-    vertical-align: center;
-}
-
-.clearfix {
-    overflow: auto;
-}
-
 li {
     list-style: none;
     margin: 0 2px;
