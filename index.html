@@ -6,10 +6,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" /> -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> -->
+    <!-- Font Awesome Kit Code -->
+    <script src="https://kit.fontawesome.com/50e202d6cf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
@@ -18,15 +19,12 @@
     <!-- Recipe Search -->
     <div id="app-container">
         <div id="search-container">
-            <div class="jumbotron jumbotron-fluid"
-                style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
                 <div id="container">
                     <div class="text-center py-5 mb-4">
                         <h2>Recette Roulette</h2>
                         <div align="center">
-                            <input class="form-control" id="input-search" type="text"
-                                placeholder="Type something to search recipe items"
-                                style="width: 300px; height: 50px;" />
+                            <input class="form-control" id="input-search" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
                         </div>
                         <br />
                         <div class="search-btn">
@@ -41,8 +39,7 @@
 
         <!-- Page Content -->
         <!-- Modal to display recipe -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -53,39 +50,16 @@
                     </div>
                     <!-- Video modal -->
                     <div class="modal-body">
-<<<<<<< HEAD
-                        This is where the recipe goes.
-                        <iframe class="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-=======
-                        <iframe id="video" width="560" height="315"
-                            src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
-                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
->>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
-                            allowfullscreen></iframe>
+                        <iframe id="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
-<<<<<<< HEAD
-                </div>
-            </div>
-        </div>
 
-        <!-- Video section -->
-        <div id="video-container" class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
-                        <iframe class="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-=======
-                    
                     <!-- Nutrition modal -->
-                    
+
                     <div class="modal-body">
-                        <iframe id="nutrition" width="560" height="315"
-                            src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4"
-                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
->>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
+                        <iframe id="nutrition" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                     <div class="modal-footer">
@@ -100,56 +74,23 @@
             <div class="row">
                 <div class="col-xl-8 col-md-8 mb-8 text-center">
                     <div class="card border-0 shadow">
-                        <img id="thumbnail"
-                            src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg"
-                            class="card-img-top" alt="...">
+                        <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="name card-title mb-0">Add Recipe Name Here</h5>
 
                             <!-- Button trigger modal to diplay video -->
-                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
+                            <button id="show-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Video
                             </button>
-                            <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
+                            <button id="ingredients" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Ingredients
                             </button>
-                            <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#staticBackdrop">
+                            <button id="instructions" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Instructions (ordered list)
                             </button>
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <!-- Recipe Info card -->
-                <!-- <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
-                        <div class="name card-header">Recipe Name Here</div>
-                        <div class="card-body text-dark">
-                            <h5 class="card-title">Optional Heading here</h5>
-
-                            <ul class="list-group">
-                                <li id="servings" class="list-group-item">Servings: </li>
-                                <li id="nutrition" class="list-group-item"> Nutrition: </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div> -->
-                <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="card-header">Recipe Name</div>
-
-                    <select id="myselect" onchange="change_myselect(this.value)">
-                <option value="servings">Servings:</option>
-                <option value="nutrition">Nutrition:</option>
-                </select>
-
-                    <p id="demo"></p>
-                </div>
-=======
->>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
             </div>
         </div>
         <div id="image-container">
@@ -157,75 +98,230 @@
             <img src="assets/images/food-footer.jpeg" width="1350px" align="middle" />
         </div>
     </div>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
-                    <div class="xs-flex xs-flex-column">
-                        <img class="logo xs-mbl" />
-                        <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
-                    </div>
-                </div>
-                <div class="col blocktext">
-                    <ul>
-                        <li>
-                            <a id="footer_privacy" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                                Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a id="footer_agreement" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                                User Agreement</a>
-                        </li>
-                        <li>
-                            <a id="footer_advertise" href="#" rel="noopener" class="black-text text-lighten-4 right">
-                                Advertise With Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- footer container -->
-        <div class="footer-copyright">
+
+
+    <!-- BOOTSTRAP RESPONSIVE FOOTER -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style="background-color: #8b1212;">
             <div class="container">
-                © 2020 Copyright Recette Roulette
-                <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+
+
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h5 class="mb-0">Get connected with us on social networks!</h5>
+
+
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                            <!-- <i class="fab fa-facebook-f"></i> -->
+
+
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
             </div>
         </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
+                        <div class="xs-flex xs-flex-column">
+                            <img class="logo xs-mbl" />
+                            <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
+                        </div>
+                    </div>
+                    <!-- <h6 class="text-uppercase font-weight-bold">Company name</h6> -->
+
+                    <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+                    <!-- <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <!-- <i class="fas fa-glass-martini-alt"> -->
+                    <h6 class="text-uppercase font-weight-bold">Beverages</h6>
+                    </i>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="https://www.betterbeveragefinder.org">Better Beverage Finder</a>
+                    </p>
+                    <!-- <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!">Bootstrap Angular</a>
+                    </p> -->
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Advertisement Opportunities</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+                    <!-- FORM GENERATOR -->
+                    <p>
+                        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Account</a></p>
+
+                    <div id="id01" class="modal">
+
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <i class="far fa-user"></i>
+                            </div>
+
+                            <div class="container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                <button type="submit" class="submitbtn">Login</button>
+                                <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+                            </div>
+
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button-info" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- FORM END -->
+
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Donate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Help</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Salt Lake City, UT 84112</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <!-- <div style="background-color: #8b1212;"> -->
+        <div class="footer-copyright text-center">© 2020 Copyright
+
+            <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
+        </div>
+        <!-- Copyright -->
+
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-</body>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
-<script type="text/javascript" src="assets/javascript/table.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/table.js"></script>
 
-<<<<<<< HEAD
-<!-- script to run modal -->
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-</body>
-
-</html>
-=======
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 
     <!-- script to run modal -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- form script -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
 </html>
->>>>>>> 3a767a3ae044a7de735ac41973375c8f57d1e845
