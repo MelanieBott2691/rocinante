@@ -182,6 +182,7 @@ span.psw {
 
 .modal {
     background-color: transparent;
+    max-height: 100%;
 }
 
 
@@ -244,7 +245,12 @@ li {
     justify-content: left;
     margin: 0 10px;
     padding: 5px 10px;
+}
 
 h5 {
     padding-bottom: 10px;
+}
+
+#app-container {
+    min-height: 100vh;
 }
