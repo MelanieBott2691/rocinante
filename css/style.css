@@ -1,19 +1,4 @@
-    /* CSS Project Start */
-
-
-/* WHAT IS THIS ONE FOR? */
-
-h2 {
-    color: white;
-    font-size: 42px;
-    text-align: center;
-}
-
-
-/*
-#container {
-    margin-left: 50px;
-} */
+/* CSS Project Start */
 
 body,
 html {
@@ -37,7 +22,6 @@ h2 {
     color: white;
     font-size: 42px;
     text-align: center;
-    margin-top: 40px;
 }
 
 li {
@@ -48,30 +32,54 @@ li {
     justify-content: space-around;
 }
 
-.h5 {
-    margin-right: auto;
-    margin-left: 25px;
-    padding: auto;
+p {
+    font-size: 14px;
+    color: rgb(41, 39, 39);
 }
 
-.page-footer {
-    background-color: whitesmoke !important;
+h5 {
+    color: white;
+    font-size: 15px !important;
+}
+
+h6 {
+    color: rgb(41, 39, 39);
+    font-size: 14px;
+}
+
+
+/* RESULTS CONTAINER */
+
+
+/* FOOTER */
+
+.fab {
+    color: white;
 }
 
 .footer-copyright {
-    background-color: turquoise !important;
+    background-color: #302b2b !important;
+    color: white;
+    font-size: 12px;
+    height: 40px !important;
+    text-align: center !important;
+    padding-top: 10px;
 }
 
 .logo {
     float: left;
 }
 
-#image-container {
-    /* display: center !important; */
+
+/* Registration Form */
+
+.centered-form {
+    margin-top: 60px;
 }
 
-.container {
-    margin-left: 20px;
+#registration {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
 
 
@@ -141,7 +149,6 @@ img.avatar {
 span.psw {
     float: right;
     padding-top: 16px;
-    /* padding-right: auto; */
 }
 
 
@@ -181,10 +188,6 @@ span.psw {
     border: 1px solid #888;
     width: 80%;
     /* Could be more or less, depending on screen size */
-}
-
-.modal {
-    background-color: transparent;
 }
 
 
@@ -243,11 +246,3 @@ span.psw {
         width: 100%;
     }
 }
-
-li {
-    justify-content: left;
-    margin: 0 10px;
-    padding: 5px 10px;
-    h5 {
-        padding-bottom: 10px;
-    }
