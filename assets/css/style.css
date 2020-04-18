@@ -1,6 +1,6 @@
                         /* CSS Project Start */
                     /* WHAT IS THIS ONE FOR? */
-                    
+
                     h2 {
                         color: white;
                         font-size: 42px;
@@ -10,32 +10,32 @@
 #container {
     margin-left: 50px;
 } */
-                    
+
                     body,
                     html {
                         background-color: white;
                         background-position: center;
                         background-repeat: no-repeat;
                     }
-                    
+
                     html {
                         font-size: calc(lem + lvw);
                     }
-                    
+
                     #input-search {
                         background-color: transparent !important;
                         color: whitesmoke;
                         border: none;
                         border-bottom: 1px solid whitesmoke;
                     }
-                    
+
                     h2 {
                         color: white;
                         font-size: 42px;
                         text-align: center;
                         margin-top: 40px;
                     }
-                    
+
                     li {
                         list-style: none;
                         margin: 0 2px;
@@ -43,7 +43,7 @@
                         display: flex;
                         justify-content: space-around;
                     }
-                    
+
                     h5 {
                         margin-right: auto;
                         margin-left: 10px;
@@ -51,30 +51,30 @@
                         color: white;
                         font-size: 15px;
                     }
-                    
+
                     .page-footer {
                         background-color: whitesmoke !important;
                     }
-                    
+
                     .footer-copyright {
                         background-color: rgb(34, 32, 32) !important;
                     }
-                    
+
                     .logo {
                         float: left;
                     }
-                    
+
                     #image-container {
                         /* display: center !important; */
                     }
-                    
+
                     .container {
                         margin-left: 20px;
                     }
                     /* =========================================== */
                     /* Account FORM CSS */
                     /* Full-width input fields */
-                    
+
                     input[type=text],
                     input[type=password] {
                         width: 100%;
@@ -84,7 +84,7 @@
                         border: 1px solid #ccc;
                         box-sizing: border-box;
                     }
-                    
+
                     .submitbtn {
                         border-radius: 5px;
                         background-color: teal;
@@ -95,16 +95,16 @@
                         cursor: pointer;
                         width: 100%;
                     }
-                    
+
                     #results-container {
                         margin-bottom: 40px;
                     }
-                    
+
                     button:hover {
                         opacity: 0.8;
                     }
                     /* Extra styles for the cancel button */
-                    
+
                     .cancelbtn {
                         width: auto;
                         height: 40px;
@@ -114,25 +114,25 @@
                         font-size: 16px;
                     }
                     /* Center the image and position the close button */
-                    
+
                     .imgcontainer {
                         text-align: center;
                         margin: 24px 0 12px 0;
                         position: relative;
                     }
-                    
+
                     img.avatar {
                         width: 60%;
                         border-radius: 50%;
                     }
-                    
+
                     span.psw {
                         float: right;
                         padding-top: 16px;
                         /* padding-right: auto; */
                     }
                     /* Account Modal (background) */
-                    
+
                     #id01 {
                         display: none;
                         /* Hidden by default */
@@ -157,7 +157,7 @@
                         margin-bottom: 80px !important;
                     }
                     /* Modal Content/Box */
-                    
+
                     .my-modal-content {
                         background-color: #fefefe;
                         margin: 5% auto 15% auto;
@@ -166,12 +166,13 @@
                         width: 80%;
                         /* Could be more or less, depending on screen size */
                     }
-                    
+
                     .modal {
                         background-color: transparent;
+                        height: 100%;
                     }
                     /* The Close Button (x) */
-                    
+
                     .my-close {
                         position: absolute;
                         right: 25px;
@@ -180,19 +181,19 @@
                         font-size: 35px;
                         font-weight: bold;
                     }
-                    
+
                     .my-close:hover,
                     .my-close:focus {
                         color: red;
                         cursor: pointer;
                     }
                     /* Add Zoom Animation */
-                    
+
                     .animate {
                         -webkit-animation: animatezoom 0.6s;
                         animation: animatezoom 0.6s
                     }
-                    
+
                     @-webkit-keyframes animatezoom {
                         from {
                             -webkit-transform: scale(0)
@@ -201,7 +202,7 @@
                             -webkit-transform: scale(1)
                         }
                     }
-                    
+
                     @keyframes animatezoom {
                         from {
                             transform: scale(0)
@@ -211,7 +212,7 @@
                         }
                     }
                     /* Change styles for span and cancel button on extra small screens */
-                    
+
                     @media screen and (max-width: 300px) {
                         span.psw {
                             display: block;
@@ -221,12 +222,16 @@
                             width: 100%;
                         }
                     }
-                    
+
                     li {
                         justify-content: left;
                         margin: 0 10px;
                         padding: 5px 10px;
+                    }
                         h5 {
                             padding-bottom: 10px;
                         }
 
+                    #app-container {
+                        min-height: 100vh;
+                    }
