@@ -78,9 +78,9 @@
             </div>
         </div>
         <!-- Modal to display video -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+        <div class="modal fade" id="staticBackdrop" data-backdrop="false" tabindex="-1" role="dialog"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
@@ -104,9 +104,9 @@
         </div>
 
         <!-- Modal to display ingredients and nutrition -->
-        <div class="modal fade" id="scrollable" data-backdrop="static" tabindex="-1" role="dialog"
+        <div class="modal fade" id="scrollable" data-backdrop="false" tabindex="-1" role="dialog"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
@@ -117,22 +117,30 @@
 
                     <!-- Ingredient and Nutrition modal -->
                     <div class="modal-body">
-                        <ul id="ingredients" class="list-group">
-                            <li class="list-group-item">5 large egg whites</li>
-                            <li class="list-group-item">3 large egg yolks</li>
-                            <li class="list-group-item">2 tablespoons unsalted butter, halved</li>
-                            <li class="list-group-item">salt, to taste</li>
-                            <li class="list-group-item">pepper, to taste</li>
-                            <li class="list-group-item">fresh chive, chopped, for garnish</li>
-                        </ul>
-                        <ul id="nutrition" class="list-group">
-                            <li>Calories 489</li>
-                            <li>Fat 38g</li>
-                            <li>Carbs 1g</li>
-                            <li>Fiber 0g</li>
-                            <li>Sugar 1g</li>
-                            <li>Protein 31g</li>
-                        </ul>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul id="ingredients" class="list-group">
+                                        <li class="list-group-item">5 large egg whites</li>
+                                        <li class="list-group-item">3 large egg yolks</li>
+                                        <li class="list-group-item">2 tablespoons unsalted butter, halved</li>
+                                        <li class="list-group-item">salt, to taste</li>
+                                        <li class="list-group-item">pepper, to taste</li>
+                                        <li class="list-group-item">fresh chive, chopped, for garnish</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul id="nutrition" class="list-group">
+                                        <li>Calories 489</li>
+                                        <li>Fat 38g</li>
+                                        <li>Carbs 1g</li>
+                                        <li>Fiber 0g</li>
+                                        <li>Sugar 1g</li>
+                                        <li>Protein 31g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -142,9 +150,9 @@
         </div>
 
         <!-- Modal to display Instructions -->
-        <div class="modal fade" id="longModal" data-backdrop="static" tabindex="-1" role="dialog"
+        <div class="modal fade" id="longModal" data-backdrop="false" tabindex="-1" role="dialog"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
