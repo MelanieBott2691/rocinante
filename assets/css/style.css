@@ -7,6 +7,13 @@ html {
     font-size: calc(lem + lvw);
 }
 
+#input-search {
+    background-color: transparent !important;
+    color: whitesmoke;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+}
+
 h2 {
     color: white;
     font-size: 42px;
