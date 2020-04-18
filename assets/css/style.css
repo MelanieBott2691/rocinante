@@ -3,6 +3,13 @@
 
 /* App Containers */
 
+body,
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 html {
     font-size: calc(lem + lvw);
 }
