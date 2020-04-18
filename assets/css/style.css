@@ -1,7 +1,16 @@
 /* CSS Project Start */
 
+h2 {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+}
 
-/* App Containers */
+
+/*
+#container {
+    margin-left: 50px;
+} */
 
 body,
 html {
@@ -25,6 +34,7 @@ h2 {
     color: white;
     font-size: 42px;
     text-align: center;
+    margin-top: 40px;
 }
 
 li {
@@ -35,54 +45,30 @@ li {
     justify-content: space-around;
 }
 
-p {
-    font-size: 14px;
-    color: rgb(41, 39, 39);
+.h5 {
+    margin-right: auto;
+    margin-left: 25px;
+    padding: auto;
 }
 
-h5 {
-    color: white;
-    font-size: 15px !important;
-}
-
-h6 {
-    color: rgb(41, 39, 39);
-    font-size: 14px;
-}
-
-
-/* RESULTS CONTAINER */
-
-
-/* FOOTER */
-
-.fab {
-    color: white;
+.page-footer {
+    background-color: whitesmoke !important;
 }
 
 .footer-copyright {
-    background-color: #302b2b !important;
-    color: white;
-    font-size: 12px;
-    height: 40px !important;
-    text-align: center !important;
-    padding-top: 10px;
+    background-color: turquoise !important;
 }
 
 .logo {
     float: left;
 }
 
-
-/* Registration Form */
-
-.centered-form {
-    margin-top: 60px;
+#image-container {
+    /* display: center !important; */
 }
 
-#registration {
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+.container {
+    margin-left: 20px;
 }
 
 
@@ -194,6 +180,10 @@ span.psw {
     /* Could be more or less, depending on screen size */
 }
 
+.modal {
+    background-color: transparent;
+}
+
 
 /* The Close Button (x) */
 
@@ -249,4 +239,12 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+}
+li {
+    justify-content: left;
+    margin: 0 10px;
+    padding: 5px 10px;
+
+h5 {
+    padding-bottom: 10px;
 }
