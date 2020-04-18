@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     <!-- Font Awesome Kit Code -->
     <script src="https://kit.fontawesome.com/50e202d6cf.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" /> -->
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="assets/css/stack.less" /> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
 </head>
 
 <body>
@@ -27,7 +24,7 @@
                 <h2>Recette Roulette</h2>
                 <input class="form-control text-center" id="input-search" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
                 <br />
-                <br>
+                <br />
                 <div class="search-btn">
                     <button id="btn-search" class="btn btn-info">Search For Recipe</button>
                 </div>
@@ -35,27 +32,22 @@
         </div>
 
         <!-- Search Results -->
-        <!-- Image of recipe and buttons for modals -->
         <div id="results-container" class="container-sm text-center">
             <div class="row">
-                <div class="col-xl-3 col-md-3 mb-3 text-center">
-                </div>
+                <div class="col-xl-3 col-md-3 mb-3 text-center"></div>
                 <div class="col-xl-6 col-md-6 mb-6 text-center">
                     <div class="card border-0 shadow">
                         <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="name card-title mb-0 font-weight-bold">Super Fluffy Omelet</h5>
-
                             <!-- Button trigger modal to display video -->
                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Video
                             </button>
-
                             <!-- button trigger modal to display ingredients and nutrition -->
                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
                                 Click for Ingredients
                             </button>
-
                             <!-- button trigger modal to display instructions -->
                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#longModal">
                                 Click for Instructions
@@ -63,8 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-3 mb-3 text-center">
-                </div>
+                <div class="col-xl-3 col-md-3 mb-3 text-center"></div>
                 <img src="assets/images/food-footer.jpeg" width="1250px">
             </div>
         </div>
@@ -85,11 +76,9 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
-
                 </div>
             </div>
         </div>
-
         <!-- Modal to display ingredients and nutrition -->
         <div class="modal fade" id="scrollable" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -100,7 +89,6 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
                     <!-- Ingredient and Nutrition modal -->
                     <div class="modal-body">
                         <div class="container-fluid">
@@ -134,7 +122,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal to display Instructions -->
         <div class="modal fade" id="longModal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -145,7 +132,6 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
                     <!-- Instructions modal -->
                     <div class="modal-body">
                         <ol id="instructions" class="list-group" type="1">
@@ -168,16 +154,12 @@
             </div>
         </div>
     </div>
-
-
     <!-- BOOTSTRAP RESPONSIVE FOOTER -->
     <footer class="page-footer font-small unique-color-dark">
         <div style="background-color: #8b1212;">
             <div class="container">
-
                 <!-- Grid row-->
                 <div class="row py-4 d-flex align-items-center">
-
                     <!-- Grid column -->
                     <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                         <h5 class="mb-0">Get connected with us on social networks!</h5>
@@ -185,7 +167,6 @@
 
                     <!-- Grid column using font awesome kit-->
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
-
                         <!-- Facebook -->
                         <a class="fb-ic">
                             <i class="fab fa-facebook-f white-text mr-4"> </i>
@@ -210,17 +191,10 @@
                 </div>
             </div>
         </div>
-
         <!-- Footer Links -->
         <div class="container text-center text-md-left mt-5">
-
-            <!-- Grid row -->
             <div class="row mt-3">
-
-                <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                    <!-- Content -->
                     <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
                         <div class="xs-flex xs-flex-column">
                             <img class="logo xs-mbl" />
@@ -228,10 +202,8 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
                     <!-- Beverage Link -->
                     <h6 class="text-uppercase font-weight-bold">Beverages</h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
@@ -239,15 +211,11 @@
                         <a href="https://www.betterbeveragefinder.org">Better Beverage Finder</a>
                     </p>
                 </div>
-
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
                     <!-- User Links -->
                     <h6 class="text-uppercase font-weight-bold">Advertisement Opportunities</h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-
-
                     <p>
                         <a href="#!">Become an Affiliate</a>
                     </p>
@@ -257,17 +225,14 @@
                     <p>
                         <a href="#!">Help</a>
                     </p>
-
                 </div>
-
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
                     <!-- Contact Info -->
                     <h6 class="text-uppercase font-weight-bold">Contact</h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <div class="modal-container">
-                        <p> <a onclick="" data-toggle="modal" data-target="#test-modal">Keep in Touch</a>
+                        <p><a onclick="" data-toggle="modal" data-target="#test-modal">Keep in Touch</a>
                             <div class="modal fade" id="test-modal" data-modal-index="1">
                                 <div class="modal-dialog modal-lg">
                                     <!-- added modal-lg-->
@@ -284,12 +249,8 @@
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
-                            <!-- /.modal -->
-
                             <div class="modal fade" id="test-modal-2" data-modal-index="2">
                                 <div class="modal-dialog modal-md">
                                     <div class="modal-content">
@@ -299,29 +260,23 @@
                                         <div class="modal-body">
                                             <form>
                                                 <div class="form-user">
-                                                    <label for="user-name" class="col-form-label">Name:</label>
+                                                    <label for="uname" class="col-form-label">Name:</label>
                                                     <input type="text" class="form-control" id="user-name" placeholder="Name" required>
                                                 </div>
                                                 <div class="form-user">
-                                                    <label for="user-email" class="col-form-label">Email:</label>
-                                                    <input type="email-address" class="form-control" id="user-email" placeholder="user@name.com" required>
+                                                    <label for="email" class="col-form-label">Email:</label>
+                                                    <input type="email-address" class="form-control" id="email" placeholder="user@name.com" required>
                                                 </div>
                                             </form>
-
                                             <div class="modal-footer">
                                                 <button id="formSubmit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-3">Done</button>
 
                                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
-                            <!-- /.modal -->
-
                             <div class="modal fade" id="test-modal-3">
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -334,15 +289,11 @@
                                             <button class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#search-btn">Return to New Search</button>
                                         </div>
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
-                            <!-- /.modal -->
-                            <!-- </div> -->
-                            <!-- this appears to be a misplaced </div>-->
+
                             <!-- INPUT FORM FOR FIREBASE -->
-                            <div class="modal fade" id="test-modal-4" data-modal-index="4">
+                            <div class="modal fade" id="test-modal-4" data-modal-index="2">
                                 <div class="modal-dialog modal-md">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -351,12 +302,12 @@
                                         <div class="modal-body">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="uname" class="col-form-label">Name:</label>
-                                                    <input type="text" class="form-control" id="uname" placeholder="Name">
+                                                    <label for="recipient-name" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="Name">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="message" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message" placeholder="Please tell us how we can help you like us!"></textarea>
+                                                    <label for="message-text" class="col-form-label">Message:</label>
+                                                    <textarea class="form-control" id="message-text" placeholder="Please tell us how we can help you like us!"></textarea>
                                                 </div>
                                             </form>
                                             <div class="modal-footer">
@@ -365,11 +316,8 @@
                                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
                             <div class="modal fade" id="test-modal-5">
                                 <div class="modal-dialog modal-sm">
@@ -379,19 +327,13 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>We appreciate your feedback!</p>
-                                            <!-- 
-                        <button class="btn btn-default" data-toggle="modal" data-target="#search-btn">Return to New Search</button> -->
                                             <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" data-backdrop="">Click Anywhere to Close</button>
                                         </div>
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
                     </div>
-
                     <!-- FORM END -->
-
                     <p>
                         <i class="fas fa-home mr-3"></i> Salt Lake City, UT 84112</p>
                     <p>
@@ -400,14 +342,14 @@
                         <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                     <p>
                         <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="footer-copyright text-center">© 2020 Copyright</div>
     </footer>
+
+    <!-- SCRIPT FOR MODALS -->
     <script>
         $(function() {
             $('.btn[data-toggle=modal]').on('click', function() {
@@ -423,27 +365,7 @@
                     currentDialog.addClass('aside-' + stackedDialogCount);
                 }
             });
-
-            // $('.modal').on('hide.bs.modal', function() {
-            //     var $dialog = $(this);
-            //     var previousDialog = $dialog.data('previous-dialog');
-            //     if (previousDialog) {
-            //         previousDialog.removeClass('aside');
-            //         $dialog.data('previous-dialog', undefined);
-            //     }
         });
-
-        // var modal = document.getElementById("#close-all");
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        //     if (event.target == closeAll {
-        //             closeAll.style.display = "none";
-        //         }
-        //     }
-
-        // })
     </script>
 
 
@@ -460,8 +382,6 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
 </body>
