@@ -166,6 +166,7 @@ span.psw {
 
 .modal {
     background-color: transparent;
+    max-height: 100%;
 }
 
 

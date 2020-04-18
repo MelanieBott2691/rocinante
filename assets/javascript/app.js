@@ -125,6 +125,9 @@ $('#btn-search').on('click', function () {
 
                      for(var j = 0; j < ingredients[i].components.length; j++) {
                         var ingredient = ingredients[i].components[j].raw_text
+                        if(ingredient === 'n/a') {
+                            ingredient = ''
+                        }
                         var ingredient = $('<li>').text(ingredient)
 
                         ingredientCat.append(ingredient)
