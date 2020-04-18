@@ -31,7 +31,7 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
-  
+
     $('#input-search').val('');
 
     // Initial call to get search count
@@ -114,24 +114,27 @@ $('#btn-search').on('click', function () {
                 // Instructions
                 $('#instructions').empty();
                 for (var i = 0; i < instructions.length; i++) {
-                    var instructionLine = $('<li>').text(instructions[i].display_text);
+                    var instructionLine = $('<li>').text(instructions[i].position + ')   ' + instructions[i].display_text);
                         $('#instructions').append(instructionLine);
                 }
                  // Ingredients
                  $('#ingredients').empty();
                  for (var i = 0; i < ingredients.length; i++) {
-                     console.log(ingredients[i].display_text)
-                     var nameSection = ingredients[i].name
-                     if(nameSection) {
-                         console.log(nameSection)
-                     } else {
-                         for(var j = 0; j < ingredients[i].components.length; j++) {
-                             console.log(ingredients[i].components[j].raw_text)
-                         }
-                     }
 
-                     var ingredientLine = $('<li>').text(ingredients[i].name);
-                         $('#ingredients').append(ingredientLine);
+                     console.log(ingredients[i].name)
+                     var ingredientCat = $('<ul>').text(ingredients[i].name)
+
+
+                     for(var j = 0; j < ingredients[i].components.length; j++) {
+                        var ingredient = ingredients[i].components[j].raw_text
+                        var ingredient = $('<li>').text(ingredient)
+
+                        ingredientCat.append(ingredient)
+                    }
+
+                    $('#ingredients').append(ingredientCat)
+
+
                  }
             });
         }
@@ -145,3 +148,4 @@ input.addEventListener('keyup', function (event) {
         document.getElementById('btn-search').click();
     }
 });
+
