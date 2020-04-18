@@ -44,9 +44,9 @@ Recette Roulette allows users to choose criteria specific to their needs and ret
 
 **Technologies in this project:**
 
-- Tasty API.
+- Tasty API
 
-- Yelp API.
+- Yelp API
 
 - GitHub
 
