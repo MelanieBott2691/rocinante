@@ -31,6 +31,7 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
+
     $('#input-search').val('');
 
     // Initial call to get search count
@@ -119,6 +120,7 @@ $('#btn-search').on('click', function () {
                  // Ingredients
                  $('#ingredients').empty();
                  for (var i = 0; i < ingredients.length; i++) {
+
                      console.log(ingredients[i].name)
                      var ingredientCat = $('<ul>').text(ingredients[i].name)
 
@@ -131,6 +133,7 @@ $('#btn-search').on('click', function () {
                     }
 
                     $('#ingredients').append(ingredientCat)
+
 
                  }
             });
@@ -145,3 +148,4 @@ input.addEventListener('keyup', function (event) {
         document.getElementById('btn-search').click();
     }
 });
+
