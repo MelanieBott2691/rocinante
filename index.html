@@ -210,7 +210,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer Links -->
+
         <!-- Footer Links -->
         <div class="container text-center text-md-left mt-5">
 
@@ -273,16 +273,15 @@
                                     <!-- added modal-lg-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                             <h4 class="modal-title">How Are We Doing?</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Are You Enjoying Recette Roulette?&hellip;</p>
-                                            <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Yes</button>
-                                            <button class="btn btn-primary" data-toggle="modal" data-target="#test-modal-4">No</button>
+                                            <p>Are You Enjoying Recette Roulette?</p>
+                                            <button class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-2">Yes</button>
+                                            <button class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-4">No</button>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
                                     <!-- /.modal-content -->
@@ -295,23 +294,27 @@
                                 <div class="modal-dialog modal-md">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
                                             <h4 class="modal-title">Keep In Touch</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="user-container">
-                                                <label for="uname"><b></b></label>
-                                                <input type="text" placeholder="Name" name="uname" required>
+                                            <form>
+                                                <div class="form-user">
+                                                    <label for="user-name" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="user-name" placeholder="Name" required>
+                                                </div>
+                                                <div class="form-user">
+                                                    <label for="user-email" class="col-form-label">Email:</label>
+                                                    <input type="email-address" class="form-control" id="user-email" placeholder="user@name.com" required>
+                                                </div>
+                                            </form>
 
-                                                <label for="email"><b></b></label>
-                                                <input type="email-address" placeholder="Email Address" name="email" required>
+                                            <div class="modal-footer">
+                                                <button id="formSubmit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-3">Done</button>
 
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                             </div>
-                                            <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Done</button>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
+
                                     </div>
                                     <!-- /.modal-content -->
                                 </div>
@@ -323,16 +326,12 @@
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                             <h4 class="modal-title">Thanks!</h4>
                                         </div>
                                         <div class="modal-body">
                                             <p>We hope you're enjoying Recette Roulette. What do you want to do next?</p>
 
-                                            <button class="btn btn-default" data-toggle="modal" data-target="#search-btn">Return to New Search</button>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#search-btn">Return to New Search</button>
                                         </div>
                                     </div>
                                     <!-- /.modal-content -->
@@ -343,29 +342,30 @@
                             <!-- </div> -->
                             <!-- this appears to be a misplaced </div>-->
                             <!-- INPUT FORM FOR FIREBASE -->
-                            <div class="modal fade" id="test-modal-4" data-modal-index="2">
+                            <div class="modal fade" id="test-modal-4" data-modal-index="4">
                                 <div class="modal-dialog modal-md">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
                                             <h4 class="modal-title">Why Don't You Like Our App?</h4>
                                         </div>
                                         <div class="modal-body">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                    <input type="text" class="form-control" id="recipient-name">
+                                                    <label for="uname" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="uname" placeholder="Name">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="message-text" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                    <label for="message" class="col-form-label">Message:</label>
+                                                    <textarea class="form-control" id="message" placeholder="Please tell us how we can help you like us!"></textarea>
                                                 </div>
                                             </form>
-                                            <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-5">Done</button>
+                                            <div class="modal-footer">
+                                                <button id="formSubmit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-5">Done</button>
+
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
+
                                     </div>
                                     <!-- /.modal-content -->
                                 </div>
@@ -375,28 +375,21 @@
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                             <h4 class="modal-title">Thanks!</h4>
                                         </div>
                                         <div class="modal-body">
                                             <p>We appreciate your feedback!</p>
                                             <!-- 
                         <button class="btn btn-default" data-toggle="modal" data-target="#search-btn">Return to New Search</button> -->
-                                            <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" onClick="closeAll()">Click Anywhere to Close</button>
-
-                                            <button type="button" class="return" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Return to New Search</span></button>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" data-backdrop="">Click Anywhere to Close</button>
                                         </div>
                                     </div>
                                     <!-- /.modal-content -->
                                 </div>
                                 <!-- /.modal-dialog -->
                             </div>
-
                     </div>
+
                     <!-- FORM END -->
 
                     <p>
@@ -431,25 +424,26 @@
                 }
             });
 
-            $('.modal').on('hide.bs.modal', function() {
-                var $dialog = $(this);
-                var previousDialog = $dialog.data('previous-dialog');
-                if (previousDialog) {
-                    previousDialog.removeClass('aside');
-                    $dialog.data('previous-dialog', undefined);
-                }
-            });
-            // var modal = document.getElementById("#close-all");
-            // window.onclick = function(event) {
-            //     if (event.target == modal) {
-            //         modal.style.display = "none";
+            // $('.modal').on('hide.bs.modal', function() {
+            //     var $dialog = $(this);
+            //     var previousDialog = $dialog.data('previous-dialog');
+            //     if (previousDialog) {
+            //         previousDialog.removeClass('aside');
+            //         $dialog.data('previous-dialog', undefined);
             //     }
-            //     if (event.target == modallA) {
-            //         modalA.style.display = "none";
-            //     }
-            // }
-            // $("#test-modal-1, #test-modal-2, #test-modal-3, #test-modal-4, #test-modal-5, #close-all").modal('hide');
-        })
+        });
+
+        // var modal = document.getElementById("#close-all");
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        //     if (event.target == closeAll {
+        //             closeAll.style.display = "none";
+        //         }
+        //     }
+
+        // })
     </script>
 
 
@@ -460,8 +454,16 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/firebase.js"></script>
 
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
 </body>
 
 </html>
