@@ -12,11 +12,27 @@ h2 {
     margin-left: 50px;
 } */
 
+body,
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 html {
     font-size: calc(lem + lvw);
 }
 
-.col {
+#input-search {
+    background-color: transparent !important;
+    color: whitesmoke;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+}
+
+h2 {
+    color: white;
+    font-size: 42px;
     text-align: center;
     margin-top: 40px;
 }
@@ -229,7 +245,12 @@ li {
     justify-content: left;
     margin: 0 10px;
     padding: 5px 10px;
+}
 
 h5 {
     padding-bottom: 10px;
+}
+
+#app-container {
+    min-height: 100vh;
 }
