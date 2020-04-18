@@ -41,3 +41,25 @@ Recette Roulette allows users to choose criteria specific to their needs and ret
 - Beverage pairing.
 
 - Links to nearby establishments for users who decide not to cook.
+
+**Technologies in this project:**
+
+- Tasty API.
+
+- Yelp API.
+
+- GitHub
+
+- Bootstrap
+
+- Font Awesome
+
+- JavaScript
+
+- JQuery
+
+- AJAX
+
+- JSON
+
+- Firebase
