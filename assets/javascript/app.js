@@ -119,18 +119,19 @@ $('#btn-search').on('click', function () {
                  // Ingredients
                  $('#ingredients').empty();
                  for (var i = 0; i < ingredients.length; i++) {
-                     console.log(ingredients[i].display_text)
-                     var nameSection = ingredients[i].name
-                     if(nameSection) {
-                         console.log(nameSection)
-                     } else {
-                         for(var j = 0; j < ingredients[i].components.length; j++) {
-                             console.log(ingredients[i].components[j].raw_text)
-                         }
-                     }
+                     console.log(ingredients[i].name)
+                     var ingredientCat = $('<ul>').text(ingredients[i].name)
 
-                     var ingredientLine = $('<li>').text(ingredients[i].name);
-                         $('#ingredients').append(ingredientLine);
+
+                     for(var j = 0; j < ingredients[i].components.length; j++) {
+                        var ingredient = ingredients[i].components[j].raw_text
+                        var ingredient = $('<li>').text(ingredient)
+
+                        ingredientCat.append(ingredient)
+                    }
+
+                    $('#ingredients').append(ingredientCat)
+
                  }
             });
         }
