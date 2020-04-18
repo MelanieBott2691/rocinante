@@ -235,10 +235,13 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+<<<<<<< HEAD
 }
 
 li {
     justify-content: left;
     margin: 0 10px;
     padding: 5px 10px;
+=======
+>>>>>>> 7d3224d9a8dcf728c86bc4324301ec2d81e56245
 }
