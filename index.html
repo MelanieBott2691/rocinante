@@ -19,11 +19,11 @@
 
 <body>
     <!-- Recipe Search -->
-    <div id="app-container" style="background-image: url('assets/images/background.png'); background-size: 100%">
-        <div id="search-container" class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg'); background-size: 100%;">
+    <div id="app-container" style="background-image: url('assets/images/background.png');">
+        <div id="search-container" class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg');">
             <div id="container" class="text-center py-5 mb-4">
                 <h2>Recette Roulette</h2>
-                <input class="form-control text-center" id="input-search" type="text" placeholder="Type something to search recipe items" style="width: 300px; height: 50px;" />
+                <input class="form-control text-center" id="input-search" type="text" placeholder="Ask for a recipe or just press search" style="width: 300px; height: 50px;" />
                 <br />
                 <br />
                 <div class="search-btn">
@@ -42,15 +42,15 @@
                         <div class="card-body text-center">
                             <h5 class="name card-title mb-0 font-weight-bold">Super Fluffy Omelet</h5>
                             <!-- Button trigger modal to display video -->
-                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                            <button type="button" class="btn btn btn-info btn-sm" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Video
                             </button>
                             <!-- button trigger modal to display ingredients and nutrition -->
-                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#scrollable">
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#scrollable">
                                 Click for Ingredients
                             </button>
                             <!-- button trigger modal to display instructions -->
-                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#longModal">
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#longModal">
                                 Click for Instructions
                             </button>
                         </div>
@@ -67,7 +67,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn btn-info" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -76,7 +76,7 @@
                         <iframe id="video" width="560" height="315" src="https://s3.amazonaws.com/video-api-prod/assets/0c039dcb0bca4ef98cbe6aef6a999914/BFV39742superfluffyomeletfb4.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn btn-info" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn-info" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -153,7 +153,7 @@
                         </ol>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -248,11 +248,11 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>Are You Enjoying Recette Roulette?</p>
-                                            <button class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-2">Yes</button>
-                                            <button class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-4">No</button>
+                                            <button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-2">Yes</button>
+                                            <button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-4">No</button>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
                                 </div>
@@ -275,9 +275,9 @@
                                                 </div>
                                             </form>
                                             <div class="modal-footer">
-                                                <button id="formSubmit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-3">Done</button>
+                                                <button id="formSubmit" class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-3">Done</button>
 
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@
                                         <div class="modal-body">
                                             <p>We hope you're enjoying Recette Roulette. What do you want to do next?</p>
 
-                                            <button class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#search-btn">Return to New Search</button>
+                                            <button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#search-btn">Return to New Search</button>
                                         </div>
                                     </div>
                                 </div>
@@ -317,9 +317,9 @@
                                                 </div>
                                             </form>
                                             <div class="modal-footer">
-                                                <button id="formComplaint" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-5">Done</button>
+                                                <button id="formComplaint" class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-5">Done</button>
 
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
                                     </div>
@@ -333,7 +333,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>We appreciate your feedback!</p>
-                                            <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" data-backdrop="">Click Anywhere</button>
+                                            <button id="close-all" type="button" class="btn btn-info" data-dismiss="modal" data-backdrop="">Click Anywhere</button>
 
                                         </div>
                                     </div>

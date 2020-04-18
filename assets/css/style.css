@@ -6,10 +6,6 @@
                         font-size: 42px;
                         text-align: center;
                     }
-                    /*
-#container {
-    margin-left: 50px;
-} */
 
                     body,
                     html {
@@ -68,9 +64,7 @@
                         /* display: center !important; */
                     }
 
-                    .container {
-                        margin-left: 20px;
-                    }
+
                     /* =========================================== */
                     /* Account FORM CSS */
                     /* Full-width input fields */
@@ -240,4 +234,37 @@
 
                     #app-container {
                         min-height: 100vh;
+                    }
+
+                    #search-container {
+                        background-size: cover;
+                    }
+
+                    .fab {
+                        color: white;
+                    }
+                    .page-footer {
+                        background-color: whitesmoke !important;
+                    }
+                    .footer-copyright {
+                        background-color: #302B2B !important;
+                        color: white;
+                        font-size: 12px;
+                        height: 40px !important;
+                        text-align: center !important;
+                        padding-top: 10px;
+                    }
+                    .logo {
+                        float: left;
+                    }
+                    .centered-form {
+                        margin-top: 60px;
+                    }
+                    #registration {
+                        background: rgba(255, 255, 255, 0.8);
+                        box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+                    }
+
+                    .name {
+                        color: black;
                     }
