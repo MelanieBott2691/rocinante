@@ -5,19 +5,6 @@ var randomIndex = function (max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
 
-// Object to parse out multiple responses from the api call
-var parseJSON = {
-    instructions: function () {
-        // return list of usabe values from instructions response
-    },
-    nutrition: function (res) {
-        return res;
-    },
-    ingredients: function () {
-        // stuff to
-    },
-};
-
 // Search button on click event
 $('#btn-search').on('click', function () {
     count++
@@ -55,7 +42,6 @@ $('#btn-search').on('click', function () {
             }).done(function (response) {
                 // Response Data
                 var res = response.results[0];
-                // console.log('response:', res);
 
                 // Nested random Recipe
                 if (res.recipes) {
@@ -70,14 +56,7 @@ $('#btn-search').on('click', function () {
                     var nutrition = resNest.nutrition;
                     var thumbnail = resNest.thumbnail_url;
                     var video = resNest.original_video_url;
-                    // console.log('id:', id);
-                    // console.log('name:', name);
-                    // console.log('servings:', servings);
-                    // console.log('ingredients', ingredients.length, ingredients);
-                    // console.log('instructions', instructions.length, instructions);
-                    // console.log('nutrition', nutrition.length, nutrition);
-                    // console.log('thumbnail', thumbnail);
-                    // console.log('video', video);
+
                 } else {
                     // Non nested radmon recipe
                     var id = res.id;
@@ -88,14 +67,6 @@ $('#btn-search').on('click', function () {
                     var nutrition = res.nutrition;
                     var thumbnail = res.thumbnail_url;
                     var video = res.original_video_url;
-                    // console.log('id:', id);
-                    // console.log('name:', name);
-                    // console.log('servings:', servings);
-                    // console.log('ingredients', ingredients.length, ingredients);
-                    // console.log('instructions', instructions.length, instructions);
-                    // console.log('nutrition', nutrition.length, nutrition);
-                    // console.log('thumbnail', thumbnail);
-                    // console.log('video', video);
                 }
 
                 // Display Data
