@@ -31,7 +31,7 @@ $('#btn-search').on('click', function () {
             'x-rapidapi-key': '9084c1818dmshef24c102683f8f1p1d3041jsna84bad01aefb',
         },
     };
-  
+
     $('#input-search').val('');
 
     // Initial call to get search count
@@ -114,7 +114,7 @@ $('#btn-search').on('click', function () {
                 // Instructions
                 $('#instructions').empty();
                 for (var i = 0; i < instructions.length; i++) {
-                    var instructionLine = $('<li>').text(instructions[i].display_text);
+                    var instructionLine = $('<li>').text(instructions[i].position + ')   ' + instructions[i].display_text);
                         $('#instructions').append(instructionLine);
                 }
                  // Ingredients
@@ -145,4 +145,3 @@ input.addEventListener('keyup', function (event) {
         document.getElementById('btn-search').click();
     }
 });
-
