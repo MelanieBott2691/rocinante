@@ -58,6 +58,7 @@
                 </div>
                 <div class="col-xl-3 col-md-3 mb-3 text-center">
                 </div>
+                <img src="assets/images/food-footer.jpeg" width="1250px">
             </div>
         </div>
         <!-- Modal to display video -->
@@ -203,7 +204,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <div class="content-wrap xs-flex xs flex-justify-space-between xs-mx-auto flex-grow">
                         <div class="xs-flex xs-flex-column">
-                            <img class="logo xs-mbl" />
+                            <!-- <img class="logo xs-mbl" /> -->
                             <img class="displayed" src="assets/images/logo_slant_right.png" width="150px" />
                         </div>
                     </div>
@@ -266,12 +267,12 @@
                                         <div class="modal-body">
                                             <form>
                                                 <div class="form-user">
-                                                    <label for="uname" class="col-form-label">Name:</label>
-                                                    <input type="text" class="form-control" id="user-name" placeholder="Name" required>
+                                                    <label for="user-name" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="user-name" placeholder="Name">
                                                 </div>
                                                 <div class="form-user">
-                                                    <label for="email" class="col-form-label">Email:</label>
-                                                    <input type="email-address" class="form-control" id="email" placeholder="user@name.com" required>
+                                                    <label for="user-email" class="col-form-label">Email:</label>
+                                                    <input type="email-address" class="form-control" id="user-email" placeholder="user@name.com">
                                                 </div>
                                             </form>
                                             <div class="modal-footer">
@@ -308,16 +309,16 @@
                                         <div class="modal-body">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Name:</label>
-                                                    <input type="text" class="form-control" id="recipient-name" placeholder="Name">
+                                                    <label for="uname" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="uname" placeholder="Name">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="message-text" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message-text" placeholder="Please tell us how we can help you like us!"></textarea>
+                                                    <label for="message" class="col-form-label">Message:</label>
+                                                    <textarea class="form-control" id="message" placeholder="Please tell us how we can help you like us!"></textarea>
                                                 </div>
                                             </form>
                                             <div class="modal-footer">
-                                                <button id="formSubmit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-5">Done</button>
+                                                <button id="formComplaint" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#test-modal-5">Done</button>
 
                                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                             </div>
@@ -333,7 +334,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>We appreciate your feedback!</p>
-                                            <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" data-backdrop="">Click Anywhere to Close</button>
+                                            <button id="close-all" type="button" class="btn btn-danger" data-dismiss="modal" data-backdrop="">Click Anywhere</button>
                                         </div>
                                     </div>
                                 </div>
