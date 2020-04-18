@@ -171,6 +171,12 @@
                         background-color: transparent;
                         height: 100%;
                     }
+
+                    .modal-title {
+                        margin-bottom: 0;
+                        line-height: 1.5;
+                        color: black;
+                    }
                     /* The Close Button (x) */
 
                     .my-close {
