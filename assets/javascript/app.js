@@ -107,6 +107,7 @@ $('#btn-search').on('click', function () {
                     }
                     $('#ingredients').append(ingredientCat)
                  }
+                 $('.ibtn').css('display', 'inline-block')
             });
         }
     });

@@ -91,6 +91,7 @@
                     }
 
                     #results-container {
+                        /* display: none; */
                         margin-bottom: 40px;
                     }
 
@@ -267,4 +268,8 @@
 
                     .name {
                         color: black;
+                    }
+
+                    .ibtn {
+                        display: none;
                     }

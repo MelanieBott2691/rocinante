@@ -19,7 +19,7 @@
 
 <body>
     <!-- Recipe Search -->
-    <div id="app-container" style="background-image: url('assets/images/background.png');">
+    <div id="app-container" >
         <div id="search-container" class="jumbotron jumbotron-fluid" style="background-image: url('assets/images/food-header.jpeg');">
             <div id="container" class="text-center py-5 mb-4">
                 <h2>Recette Roulette</h2>
@@ -38,19 +38,19 @@
                 <div class="col-xl-3 col-md-3 mb-3 text-center"></div>
                 <div class="col-xl-6 col-md-6 mb-6 text-center">
                     <div class="card border-0 shadow">
-                        <img id="thumbnail" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/143172.jpg" class="card-img-top" alt="...">
+                        <img id="thumbnail" src="assets/images/plate.png" class="card-img-top p-3" alt="...">
                         <div class="card-body text-center">
-                            <h5 class="name card-title mb-0 font-weight-bold">Super Fluffy Omelet</h5>
+                            <h5 class="name card-title mb-0 font-weight-bold"></h5>
                             <!-- Button trigger modal to display video -->
-                            <button type="button" class="btn btn btn-info btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                            <button type="button" class="btn btn-info btn-sm ibtn" data-toggle="modal" data-target="#staticBackdrop">
                                 Click for Video
                             </button>
                             <!-- button trigger modal to display ingredients and nutrition -->
-                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#scrollable">
+                            <button type="button" class="btn btn-info btn-sm ibtn" data-toggle="modal" data-target="#scrollable">
                                 Click for Ingredients
                             </button>
                             <!-- button trigger modal to display instructions -->
-                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#longModal">
+                            <button type="button" class="btn btn-info btn-sm ibtn" data-toggle="modal" data-target="#longModal">
                                 Click for Instructions
                             </button>
                         </div>
@@ -62,7 +62,6 @@
         </div>
         <!-- Modal to display video -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -83,7 +82,6 @@
         </div>
         <!-- Modal to display ingredients and nutrition -->
         <div class="modal fade" id="scrollable" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -98,23 +96,10 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <ul id="ingredients" class="list-group">
-
-                                        <li class="list-group-item">5 large egg whites</li>
-                                        <li class="list-group-item">3 large egg yolks</li>
-                                        <li class="list-group-item">2 tablespoons unsalted butter, halved</li>
-                                        <li class="list-group-item">salt, to taste</li>
-                                        <li class="list-group-item">pepper, to taste</li>
-                                        <li class="list-group-item">fresh chive, chopped, for garnish</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-4">
                                     <ul id="nutrition" class="list-group">
-                                        <li>Calories 489</li>
-                                        <li>Fat 38g</li>
-                                        <li>Carbs 1g</li>
-                                        <li>Fiber 0g</li>
-                                        <li>Sugar 1g</li>
-                                        <li>Protein 31g</li>
                                     </ul>
                                 </div>
                             </div>
@@ -128,7 +113,6 @@
         </div>
         <!-- Modal to display Instructions -->
         <div class="modal fade" id="longModal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -140,16 +124,6 @@
                     <!-- Instructions modal -->
                     <div class="modal-body">
                         <ol id="instructions" class="list-group" type="1">
-                            <li class="list-group-item">Separate the egg whites and the egg yolks in two separate bowls. You’ll only need 3 yolks, so discard the other 2 or reserve for another use.</li>
-                            <li class="list-group-item">Whisk the egg yolks until they become homogenous and pale in color. Set aside.</li>
-                            <li class="list-group-item">Transfer the egg whites to a large bowl and whisk until they triple in size and become white with medium peaks.</li>
-                            <li class="list-group-item">Carefully fold the egg yolks into the egg whites until fully incorporated.</li>
-                            <li class="list-group-item">Pour the egg mixture into a medium nonstick frying pan with a lid. Cook over medium-low heat until bottom of omelet has set, about 5 minutes.</li>
-                            <li class="list-group-item">Lift up each side of the omelette and drop a tablespoon of butter underneath.</li>
-                            <li class="list-group-item">Cover the pan and cook for another 5 minutes, or until the top of the omelet has set.</li>
-                            <li class="list-group-item">Remove the lid and season the omelet with salt and pepper. Remove the pan from the heat.</li>
-                            <li class="list-group-item">Fold the omelette onto a plate and sprinkle with chives.</li>
-                            <li class="list-group-item">Enjoy!</li>
                         </ol>
                     </div>
                     <div class="modal-footer">
@@ -169,7 +143,6 @@
                     <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                         <h5 class="mb-0">Get connected with us on social networks!</h5>
                     </div>
-
                     <!-- Grid column using font awesome kit-->
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
                         <!-- Facebook -->
